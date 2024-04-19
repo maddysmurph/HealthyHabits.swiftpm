@@ -47,13 +47,17 @@ struct ContentView: View {
                             .foregroundColor(.black)
                     }
                 }
+            .foregroundColor(.yellow)
+        NavigationView {
+            NavigationLink("Get Started") {
+                QuestionView()
             }
         }
-        }
+    }
 }
 extension Color {
-    static let CustomYellowLight = Color (red: 218/255, green: 165/255, blue: 32/255)
+    static let CustomYellowLight = Color (red: 250/255, green: 218/255, blue: 94/255)
 }
 extension Color {
-    static let CustomYellowDark = Color (red: 218/255, green: 165/255, blue: 32/255)
+    static let CustomYellowDark = Color (red: 255/255, green: 195/255, blue: 11/255)
 }
