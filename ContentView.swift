@@ -13,6 +13,11 @@ struct ContentView: View {
         Text("Track and Personalize Your Health Plan")
             .bold()
             .foregroundColor(.yellow)
+        NavigationView {
+            NavigationLink("Get Started") {
+                QuestionView()
+            }
+        }
     }
 }
 extension Color {
