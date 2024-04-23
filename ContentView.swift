@@ -55,8 +55,9 @@ struct ContentView: View {
                             QuestionView()
                             
                         }
-                        .frame(width: 100, height: 40)
-                        .font(.system(size: 30))
+                        .frame(width: 150, height: 35)
+                        .font(.system(size: 20))
+                        .bold()
                         .foregroundColor(.white)
                         .background(.pink)
                         .clipShape(RoundedRectangle(cornerRadius: 10.0))
