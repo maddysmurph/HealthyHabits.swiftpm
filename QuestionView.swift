@@ -48,6 +48,9 @@ struct QuestionView: View {
             NavigationView {
                 NavigationLink("Continue"){
                     HealthConditionView()
+                        .frame(width: 100, height: 20)
+                        .foregroundColor(.white)
+                        .background(Color.CustomYellowDark)
                 }
             }
         }
