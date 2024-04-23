@@ -6,3 +6,37 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct PhysicalActivityView: View {
+    @State var physicalactivity = false
+    var body: some View {
+        Text("How frequent are you physically active?")
+        VStack {
+            Button("0 times a week"){
+                physicalactivity = false
+            }
+            .font(.system(size: 20))
+            .foregroundColor(.CustomYellowLight)
+            .frame(width: 100, height: 100)
+            Button("1-2 times a week"){
+                physicalactivity = false
+            }
+            .font(.system(size: 20))
+            .foregroundColor(.CustomYellowLight)
+            .frame(width: 100, height: 100)
+            Button("3-4 times a week"){
+                physicalactivity = false
+            }
+            .font(.system(size: 20))
+            .foregroundColor(.CustomYellowLight)
+            .frame(width: 100, height: 100)
+            Button("5+ times a week"){
+                physicalactivity = false
+            }
+            .font(.system(size: 20))
+            .foregroundColor(.CustomYellowLight)
+            .frame(width: 100, height: 100)
+        }
+    }
+}
