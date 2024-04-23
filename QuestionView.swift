@@ -9,11 +9,11 @@ import SwiftUI
 
 struct QuestionView: View {
     
-    @State var name = ""
-    @State var age = 0
-    @State var sex = ""
-    @State var weight = 0
-    @State var height = ""
+    @AppStorage("Name") var name: String = ""
+    @AppStorage("Age") var age: Int = 0
+    @AppStorage("Sex") var sex: String = ""
+    @AppStorage("Weight") var weight: Int = 0
+    @AppStorage("Height") var height: String = ""
     
     var body: some View {
         NavigationView {
@@ -28,6 +28,8 @@ struct QuestionView: View {
                     .font(.system(size: 30))
                     .bold()
                     .foregroundColor(.CustomYellowLight)
+                Divider()
+                    .padding()
                 
                 HStack{
                     VStack(alignment: .trailing, spacing: 30, content: {
@@ -52,8 +54,12 @@ struct QuestionView: View {
                        
                     
                 }
-//                .frame(width: 100, height: 20)
-//                .foregroundColor(.white)
+                .frame(width: 150, height: 35)
+                .font(.system(size: 20))
+                .bold()
+                .foregroundColor(.white)
+                .background(Color.CustomYellowDark)
+                .clipShape(RoundedRectangle(cornerRadius: 10.0))
             }
         }
     }
