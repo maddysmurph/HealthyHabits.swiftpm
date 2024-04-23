@@ -5,7 +5,7 @@ struct ContentView: View {
         Text("Welcome to")
             .font(.system(size: 40))
             .foregroundColor(.black)
-       Text("Healthy Habits")
+        Text("Healthy Habits")
             .font(.system(size: 45))
             .bold()
             .foregroundColor(.black)
@@ -47,10 +47,12 @@ struct ContentView: View {
                             .foregroundColor(.black)
                     }
                 }
-            .foregroundColor(.yellow)
-        NavigationView {
-            NavigationLink("Get Started") {
-                QuestionView()
+                .foregroundColor(.yellow)
+                NavigationView {
+                    NavigationLink("Get Started") {
+                        QuestionView()
+                    }
+                }
             }
         }
     }
@@ -61,3 +63,4 @@ extension Color {
 extension Color {
     static let CustomYellowDark = Color (red: 255/255, green: 195/255, blue: 11/255)
 }
+

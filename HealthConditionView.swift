@@ -39,4 +39,3 @@ struct HealthConditionView: View {
     }
 }
 
-
