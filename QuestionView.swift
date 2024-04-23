@@ -9,11 +9,11 @@ import SwiftUI
 
 struct QuestionView: View {
     
-    @State var name = ""
-    @State var age = 0
-    @State var sex = ""
-    @State var weight = 0
-    @State var height = ""
+    @AppStorage("Name") var name: String = ""
+    @AppStorage("Age") var age: Int = 0
+    @AppStorage("Sex") var sex: String = ""
+    @AppStorage("Weight") var weight: Int = 0
+    @AppStorage("Height") var height: String = ""
     
     var body: some View {
         VStack{
@@ -27,6 +27,11 @@ struct QuestionView: View {
                 .font(.system(size: 30))
                 .bold()
                 .foregroundColor(.CustomYellowLight)
+            Divider()
+                .padding()
+            
+            Spacer()
+    
             
             HStack{
                 VStack(alignment: .trailing, spacing: 30, content: {
