@@ -51,6 +51,7 @@ struct QuestionView: View {
                 
                 NavigationLink("Continue"){
                     HealthConditionView()
+                        
                        
                     
                 }

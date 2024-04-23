@@ -21,7 +21,7 @@ struct MedicationView: View {
         Text("your health plan")
             .font(.system(size: 30))
             .bold()
-            .foregroundColor(.CustomYellowLight)
+            .foregroundColor(.black)
         
         Text("Do you take any medications?")
             .font(.system(size: 20))
@@ -31,8 +31,10 @@ struct MedicationView: View {
             Medication = false
         }
         .font(.system(size: 20))
-        .foregroundColor(.CustomYellowLight)
-        .frame(width: 100, height: 40)
+        .foregroundColor(.white)
+        .background(.pink)
+        .frame(width: 150, height: 35)
+        .clipShape(RoundedRectangle(cornerRadius: 10.0))
        
         
         Button("Yes"){
@@ -40,8 +42,10 @@ struct MedicationView: View {
             TextField("ex. 8 AM", text: $Medicationtime)
         }
         .font(.system(size: 20))
-        .foregroundColor(.CustomYellowLight)
-        .frame(width: 100, height: 40)
+        .foregroundColor(.white)
+        .background(.pink)
+        .frame(width: 150, height: 35)
+        .clipShape(RoundedRectangle(cornerRadius: 10.0))
     }
 }
 

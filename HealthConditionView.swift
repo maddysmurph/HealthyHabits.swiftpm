@@ -20,7 +20,7 @@ struct HealthConditionView: View {
                 Text("your health plan")
                     .font(.system(size: 30))
                     .bold()
-                    .foregroundColor(.CustomYellowLight)
+                    .foregroundColor(.black)
                 
                 Text("Do you have a health condition?")
                     .font(.system(size: 20))
