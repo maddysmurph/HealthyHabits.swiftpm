@@ -23,7 +23,7 @@ struct MedicationView: View {
             .bold()
             .foregroundColor(.CustomYellowLight)
         
-        Text("Do you have a health condition?")
+        Text("Do you take any medications?")
             .font(.system(size: 20))
             .foregroundColor(.CustomYellowLight)
         
@@ -32,7 +32,7 @@ struct MedicationView: View {
         }
         .font(.system(size: 20))
         .foregroundColor(.CustomYellowLight)
-        .frame(width: 100, height: 100)
+        .frame(width: 100, height: 40)
        
         
         Button("Yes"){
@@ -41,7 +41,7 @@ struct MedicationView: View {
         }
         .font(.system(size: 20))
         .foregroundColor(.CustomYellowLight)
-        .frame(width: 100, height: 100)
+        .frame(width: 100, height: 40)
     }
 }
 
