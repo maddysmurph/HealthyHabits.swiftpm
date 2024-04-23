@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MedicationView: View {
     @State var Medication = false
-    @Binding var Medicationtype = ""
+    @State var Medicationtime = ""
     var body: some View {
         
         Text("Personalize")
@@ -37,7 +37,7 @@ struct MedicationView: View {
         
         Button("Yes"){
             Text("When do you take the medication?")
-            TextField("ex. 8 AM", text: $Medicationtype)
+            TextField("ex. 8 AM", text: $Medicationtime)
         }
         .font(.system(size: 20))
         .foregroundColor(.CustomYellowLight)
