@@ -47,10 +47,14 @@ struct ContentView: View {
                             .foregroundColor(.black)
                     }
                 }
-                .foregroundColor(.yellow)
                 NavigationView {
                     NavigationLink("Get Started") {
                         QuestionView()
+                            .frame(width: 100, height: 40)
+                                                .font(.system(size: 30))
+                                                .foregroundColor(.white)
+                                                .background(.pink)
+                                                .clipShape(RoundedRectangle(cornerRadius: 10.0))
                     }
                 }
             }
