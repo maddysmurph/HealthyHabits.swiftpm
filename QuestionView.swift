@@ -16,7 +16,6 @@ struct QuestionView: View {
     @AppStorage("Height") var height: String = ""
     
     var body: some View {
-        NavigationView {
             VStack{
                 
                 Text("Personalize")
@@ -64,7 +63,6 @@ struct QuestionView: View {
                 .foregroundColor(.white)
                 .background(Color.CustomYellowDark)
                 .clipShape(RoundedRectangle(cornerRadius: 10.0))
-            }
         }
     }
 }

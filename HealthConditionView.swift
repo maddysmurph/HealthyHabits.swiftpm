@@ -12,7 +12,6 @@ struct HealthConditionView: View {
     @State var backgroundColor1 = Color.CustomYellowLight
     @State var backgroundColor2 = Color.CustomYellowLight
     var body: some View {
-        NavigationView{
             VStack{
                 Text("Personalize")
                     .font(.system(size: 30))
@@ -66,7 +65,6 @@ struct HealthConditionView: View {
                 .background(Color.CustomYellowDark)
                 .clipShape(RoundedRectangle(cornerRadius: 10.0))
 
-            }
         }
     }
 }
