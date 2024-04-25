@@ -37,7 +37,10 @@ struct PhysicalActivityView: View {
             .font(.system(size: 20))
             .foregroundColor(.CustomYellowLight)
             .frame(width: 300, height: 40)
-            
+            NavigationLink("Next"){
+                PreferredTypeOfExercise()
+
+            }
         }
     }
 }
