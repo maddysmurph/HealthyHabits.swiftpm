@@ -5,8 +5,6 @@
 //  Created by Nicole Park on 4/25/24.
 //
 
-import Foundation
-import UIKit
 import SwiftUI
 
 struct preferredSleepTime: View {
@@ -14,7 +12,6 @@ struct preferredSleepTime: View {
         Text("Select preferred sleep time.")
     }
 }
-
 class sleepTime: UIViewController {
     @IBOutlet var textfield: UITextField!
     override func viewDidLoad() {
@@ -23,7 +20,7 @@ class sleepTime: UIViewController {
         let time = Date()
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_gb")
-        formatter.dateFormat = "hh:mm:ss"
+        formatter.dateFormat = "HH:mm:ss"
         textfield.text = formatter.string(from: time)
         textfield.textColor = .link
         
@@ -37,7 +34,7 @@ class sleepTime: UIViewController {
     {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_gb")
-        formatter.dateFormat = "hh:mm:ss"
+        formatter.dateFormat = "HH:mm:ss"
         textfield.text = formatter.string(from: sender.date)
     }
 }

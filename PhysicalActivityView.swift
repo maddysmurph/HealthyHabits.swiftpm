@@ -16,29 +16,41 @@ struct PhysicalActivityView: View {
             Button("0 times a week"){
                 physicalactivity = false
             }
-            .font(.system(size: 20))
-            .foregroundColor(.CustomYellowLight)
             .frame(width: 300, height: 40)
+            .font(.system(size: 20))
+            .bold()
+            .foregroundColor(.white)
+            .background(Color.CustomYellowLight)
+            .clipShape(RoundedRectangle(cornerRadius: 10.0))
             Button("1-2 times a week"){
                 physicalactivity = false
             }
-            .font(.system(size: 20))
-            .foregroundColor(.CustomYellowLight)
             .frame(width: 300, height: 40)
+            .font(.system(size: 20))
+            .bold()
+            .foregroundColor(.white)
+            .background(Color.CustomYellowLight)
+            .clipShape(RoundedRectangle(cornerRadius: 10.0))
             Button("3-4 times a week"){
                 physicalactivity = false
             }
-            .font(.system(size: 20))
-            .foregroundColor(.CustomYellowLight)
             .frame(width: 300, height: 40)
+            .font(.system(size: 20))
+            .bold()
+            .foregroundColor(.white)
+            .background(Color.CustomYellowLight)
+            .clipShape(RoundedRectangle(cornerRadius: 10.0))
             Button("5+ times a week"){
                 physicalactivity = false
             }
-            .font(.system(size: 20))
-            .foregroundColor(.CustomYellowLight)
             .frame(width: 300, height: 40)
+            .font(.system(size: 20))
+            .bold()
+            .foregroundColor(.white)
+            .background(Color.CustomYellowLight)
+            .clipShape(RoundedRectangle(cornerRadius: 10.0))
             NavigationLink("Continue"){
-                preferredSleepTime()
+                PreferredTypeOfExercise()
 
             }
             .frame(width: 200, height: 40)

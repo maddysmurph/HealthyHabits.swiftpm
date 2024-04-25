@@ -30,10 +30,11 @@ struct MedicationView: View {
         Button("No"){
             Medication = false
         }
+        .frame(width: 150, height: 40)
         .font(.system(size: 20))
+        .bold()
         .foregroundColor(.white)
-        .background(.pink)
-        .frame(width: 150, height: 35)
+        .background(Color.CustomYellowLight)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
        
         
@@ -41,11 +42,13 @@ struct MedicationView: View {
             Text("When do you take the medication?")
             TextField("ex. 8 AM", text: $Medicationtime)
         }
+        .frame(width: 150, height: 40)
         .font(.system(size: 20))
+        .bold()
         .foregroundColor(.white)
-        .background(.pink)
-        .frame(width: 150, height: 35)
+        .background(Color.CustomYellowLight)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
+
         NavigationLink("Continue"){
             PhysicalActivityView()
 

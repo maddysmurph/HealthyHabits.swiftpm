@@ -31,10 +31,16 @@ struct PreferredTypeOfExercise: View {
             .foregroundColor(.white)
             .background(Color.CustomYellowLight)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
- //           NavigationLink("Continue"){
-//                PreferredTypeOfExercise()
+            NavigationLink("Continue"){
+                preferredSleepTime()
 
-//            }
+            }
+            .frame(width: 200, height: 40)
+            .font(.system(size: 20))
+            .bold()
+            .foregroundColor(.white)
+            .background(Color.CustomYellowDark)
+            .clipShape(RoundedRectangle(cornerRadius: 10.0))
         }
     }
 }
