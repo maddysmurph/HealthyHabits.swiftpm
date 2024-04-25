@@ -18,7 +18,6 @@ struct PhysicalActivityView: View {
             }
             .frame(width: 300, height: 40)
             .font(.system(size: 20))
-            .bold()
             .foregroundColor(.white)
             .background(Color.CustomYellowLight)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
@@ -27,7 +26,6 @@ struct PhysicalActivityView: View {
             }
             .frame(width: 300, height: 40)
             .font(.system(size: 20))
-            .bold()
             .foregroundColor(.white)
             .background(Color.CustomYellowLight)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
@@ -36,7 +34,6 @@ struct PhysicalActivityView: View {
             }
             .frame(width: 300, height: 40)
             .font(.system(size: 20))
-            .bold()
             .foregroundColor(.white)
             .background(Color.CustomYellowLight)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
@@ -45,7 +42,6 @@ struct PhysicalActivityView: View {
             }
             .frame(width: 300, height: 40)
             .font(.system(size: 20))
-            .bold()
             .foregroundColor(.white)
             .background(Color.CustomYellowLight)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))

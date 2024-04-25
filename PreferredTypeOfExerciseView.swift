@@ -18,7 +18,6 @@ struct PreferredTypeOfExercise: View {
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
-            .bold()
             .foregroundColor(.white)
             .background(Color.CustomYellowLight)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
@@ -27,7 +26,6 @@ struct PreferredTypeOfExercise: View {
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
-            .bold()
             .foregroundColor(.white)
             .background(Color.CustomYellowLight)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
