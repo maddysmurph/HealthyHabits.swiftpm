@@ -46,6 +46,17 @@ struct MedicationView: View {
         .background(.pink)
         .frame(width: 150, height: 35)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
+        NavigationLink("Continue"){
+            PhysicalActivityView()
+
+        }
+        .frame(width: 200, height: 40)
+        .font(.system(size: 20))
+        .bold()
+        .foregroundColor(.white)
+        .background(Color.CustomYellowDark)
+        .clipShape(RoundedRectangle(cornerRadius: 10.0))
+
     }
 }
 

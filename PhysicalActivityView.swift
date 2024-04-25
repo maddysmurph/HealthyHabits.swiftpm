@@ -37,10 +37,16 @@ struct PhysicalActivityView: View {
             .font(.system(size: 20))
             .foregroundColor(.CustomYellowLight)
             .frame(width: 300, height: 40)
-            NavigationLink("Next"){
-                PreferredTypeOfExercise()
+            NavigationLink("Continue"){
+                preferredSleepTime()
 
             }
+            .frame(width: 200, height: 40)
+            .font(.system(size: 20))
+            .bold()
+            .foregroundColor(.white)
+            .background(Color.CustomYellowDark)
+            .clipShape(RoundedRectangle(cornerRadius: 10.0))
         }
     }
 }

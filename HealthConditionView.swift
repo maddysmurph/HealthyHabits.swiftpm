@@ -55,8 +55,8 @@ struct HealthConditionView: View {
                 
                 Divider()
                 
-                NavigationLink("Next"){
-                    PhysicalActivityView()
+                NavigationLink("Continue"){
+                    MedicationView()
 
                 }
                 .frame(width: 200, height: 40)
