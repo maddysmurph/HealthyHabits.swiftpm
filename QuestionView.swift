@@ -20,33 +20,36 @@ struct QuestionView: View {
             VStack{
                 
                 Text("Personalize")
-                    .font(.system(size: 30))
+                    .font(.system(size: 45))
                     .bold()
                     .foregroundColor(.CustomYellowDark)
                 
                 Text("your health plan")
-                    .font(.system(size: 30))
+                    .font(.system(size: 45))
                     .bold()
                     .foregroundColor(.CustomYellowLight)
                 Divider()
                     .padding()
                 
-                HStack{
-                    VStack(alignment: .trailing, spacing: 30, content: {
+                HStack(alignment: .center){
+                    VStack(alignment: .trailing, spacing: 30) {
                         Text("Name: ")
                         Text("Age: ")
                         Text("Sex: ")
                         Text("Weight (lbs): ")
                         Text("Height: ")
-                    })
+                    }
+                    .font(.system(size: 20))
                     
-                    VStack(alignment: .leading, spacing: 30, content: {
+                    VStack(alignment: .leading, spacing: 20){
                         TextField("Not Set", text: $name)
                         TextField("Not Set", value: $age, format: .number)
                         TextField("Not Set", text: $sex)
                         TextField("Not Set", value: $weight, format: .number)
                         TextField("Not Set", text: $height)
-                    })
+                    }
+                    .font(.system(size: 20))
+                    .textFieldStyle(.roundedBorder)
                 }
                 
                 NavigationLink("Continue"){
