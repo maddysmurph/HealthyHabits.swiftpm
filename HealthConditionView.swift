@@ -29,15 +29,18 @@ struct HealthConditionView: View {
                 Button("Yes"){
                     healthCondition = true
                 }
-                .font(.system(size: 20))
-                .foregroundColor(.CustomYellowLight)
-                .frame(width: 100, height: 100)
+
                 
                 
                 Button("No"){
                     healthCondition = false
                 }
-                NavigationLink("Next", destination: MedicationView())
+
+                NavigationLink("Next"){
+                    PhysicalActivityView()
+
+                }
+
             }
         }
     }
