@@ -24,9 +24,9 @@ struct QuestionView: View {
                     .foregroundColor(.CustomYellowDark)
                 
                 Text("your health plan")
-                    .font(.system(size: 45))
+                    .font(.system(size: 42))
                     .bold()
-                    .foregroundColor(.CustomYellowLight)
+                    .foregroundColor(.black)
                 Divider()
                     .padding()
                 

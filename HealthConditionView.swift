@@ -14,20 +14,20 @@ struct HealthConditionView: View {
     var body: some View {
             VStack{
                 Text("Personalize")
-                    .font(.system(size: 30))
+                    .font(.system(size: 45))
                     .bold()
                     .foregroundColor(.CustomYellowDark)
                 
                 Text("your health plan")
-                    .font(.system(size: 30))
+                    .font(.system(size: 42))
                     .bold()
                     .foregroundColor(.black)
+                Divider()
+                    .padding()
                 
                 Text("Do you have a health condition?")
                     .font(.system(size: 20))
-                    .foregroundColor(.CustomYellowLight)
-                
-                Divider()
+                    .foregroundColor(.black)
                 
                 Button("Yes"){
                     healthCondition = true
@@ -52,7 +52,7 @@ struct HealthConditionView: View {
                 .background(backgroundColor2)
                 .clipShape(RoundedRectangle(cornerRadius: 10.0))
                 
-                Divider()
+
                 
                 NavigationLink("Continue"){
                     MedicationView()

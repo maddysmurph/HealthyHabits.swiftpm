@@ -11,8 +11,22 @@ import SwiftUI
 struct PreferredTypeOfExercise: View {
     @State var preferredexercisetype = false
     var body: some View {
-        Text("Select preferred type of exercise.")
         VStack {
+            Text("Personalize")
+                .font(.system(size: 45))
+                .bold()
+                .foregroundColor(.CustomYellowDark)
+            
+            Text("your health plan")
+                .font(.system(size: 42))
+                .bold()
+                .foregroundColor(.black)
+            Divider()
+                .padding()
+            Text("Select preferred type of exercise.")
+                .font(.system(size: 20))
+                .foregroundColor(.black)
+
             Button("Aerobic") {
                 preferredexercisetype = false
             }

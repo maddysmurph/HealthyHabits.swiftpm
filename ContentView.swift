@@ -11,8 +11,6 @@ struct ContentView: View {
                     .font(.system(size: 45))
                     .bold()
                     .foregroundColor(.black)
-                Divider()
-                    .padding(25.0)
                 
                 VStack {
                     VStack {
@@ -44,23 +42,26 @@ struct ContentView: View {
                                     .resizable()
                                     .frame(width: 50, height: 50)
                                 Text("Fix your sleep schedule")
-                                    .font(.system(size: 22))
+                                    .font(.system(size: 25))
                                     .multilineTextAlignment(.leading)
                                     .bold()
                                     .foregroundColor(.black)
                             }
                         }
-                        
-                        NavigationLink("Get Started") {
-                            QuestionView()
-                            
+                        Divider()
+                            .padding(20.0)
+                        VStack(alignment: .center, spacing: 30){
+                            NavigationLink("Get Started") {
+                                QuestionView()
+                                
+                            }
+                            .frame(width: 150, height: 40)
+                            .font(.system(size: 20))
+                            .bold()
+                            .foregroundColor(.white)
+                            .background(Color.CustomYellowDark)
+                            .clipShape(RoundedRectangle(cornerRadius: 10.0))
                         }
-                        .frame(width: 150, height: 35)
-                        .font(.system(size: 20))
-                        .bold()
-                        .foregroundColor(.white)
-                        .background(.pink)
-                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
                     }
                 }
             }

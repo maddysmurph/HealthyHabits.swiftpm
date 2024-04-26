@@ -14,18 +14,20 @@ struct MedicationView: View {
     var body: some View {
         
         Text("Personalize")
-            .font(.system(size: 30))
+            .font(.system(size: 45))
             .bold()
             .foregroundColor(.CustomYellowDark)
         
         Text("your health plan")
-            .font(.system(size: 30))
+            .font(.system(size: 42))
             .bold()
             .foregroundColor(.black)
+        Divider()
+            .padding()
         
         Text("Do you take any medications?")
             .font(.system(size: 20))
-            .foregroundColor(.CustomYellowLight)
+            .foregroundColor(.black)
         
         Button("No"){
             Medication = false
