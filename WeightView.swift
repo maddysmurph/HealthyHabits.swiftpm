@@ -25,7 +25,7 @@ struct WeightView: View {
         Text("How much weight do you hope to lose?")
             .font(.system(size: 20))
             .foregroundColor(.black)
-        VStack {
+        VStack(alignment: .center, spacing: 13) {
             Button("<5 lbs") {
                 weight = false
             }

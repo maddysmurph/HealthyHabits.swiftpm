@@ -27,7 +27,7 @@ struct PhysicalActivityView: View {
         Text("How frequent are you physically active?")
             .font(.system(size: 20))
             .foregroundColor(.black)
-        VStack {
+        VStack(alignment: .center, spacing: 13) {
             Button("0 times a week"){
                 physicalactivity = false
             }
@@ -60,16 +60,18 @@ struct PhysicalActivityView: View {
             .foregroundColor(.white)
             .background(Color.CustomYellowLight)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
-            NavigationLink("Continue"){
-                PreferredTypeOfExercise()
-
+            VStack(alignment: .center, spacing: 25) {
+                NavigationLink("Continue"){
+                    PreferredTypeOfExercise()
+                    
+                }
+                .frame(width: 200, height: 40)
+                .font(.system(size: 20))
+                .bold()
+                .foregroundColor(.white)
+                .background(Color.CustomYellowDark)
+                .clipShape(RoundedRectangle(cornerRadius: 10.0))
             }
-            .frame(width: 200, height: 40)
-            .font(.system(size: 20))
-            .bold()
-            .foregroundColor(.white)
-            .background(Color.CustomYellowDark)
-            .clipShape(RoundedRectangle(cornerRadius: 10.0))
         }
     }
 }
