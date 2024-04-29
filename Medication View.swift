@@ -29,24 +29,22 @@ struct MedicationView: View {
             .font(.system(size: 20))
             .foregroundColor(.black)
         
-        Button("No"){
+        Button("Yes"){
             Medication = false
         }
-        .frame(width: 150, height: 40)
+        .frame(width: 150, height: 35)
         .font(.system(size: 20))
-        .bold()
         .foregroundColor(.white)
         .background(Color.CustomYellowLight)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
        
         
-        Button("Yes"){
+        Button("No"){
             Text("When do you take the medication?")
             TextField("ex. 8 AM", text: $Medicationtime)
         }
-        .frame(width: 150, height: 40)
+        .frame(width: 150, height: 35)
         .font(.system(size: 20))
-        .bold()
         .foregroundColor(.white)
         .background(Color.CustomYellowLight)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
