@@ -12,7 +12,7 @@ struct HomeView: View {
         VStack(alignment: .leading) {
             HStack {
                 Text("Hello")
-                    .font(.system(size: 40))
+                    .font(.system(size: 50))
                     .foregroundColor(.black)
                     .bold()
                     .padding([.leading])
@@ -22,10 +22,17 @@ struct HomeView: View {
                 .foregroundColor(.black)
                 .padding([.leading])
             Divider()
-            RoundedRectangle(cornerRadius: 65)
-                .size(width: 200, height: 265)
-                .foregroundColor(.CustomGreenLight)
-                .padding([.leading])
+            HStack {
+                RoundedRectangle(cornerRadius: 65)
+                    .size(width: 200, height: 265)
+                    .foregroundColor(.CustomGreenLight)
+                    .padding([.leading])
+
+                RoundedRectangle(cornerRadius: 45)
+                    .size(width: 150, height: 150)
+                    .foregroundColor(.blue)
+                    .padding([.leading])
+            }
         
         }
         RoundedRectangle(cornerRadius: 65)
