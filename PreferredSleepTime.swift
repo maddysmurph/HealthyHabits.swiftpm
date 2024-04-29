@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct preferredSleepTime: View {
+    @State private var currentDate = Date()
     var body: some View {
         Text("Personalize")
             .font(.system(size: 45))
@@ -24,6 +25,8 @@ struct preferredSleepTime: View {
         Text("Select preferred sleep time.")
             .font(.system(size: 20))
             .foregroundColor(.black)
+        DatePicker("", selection: $currentDate, displayedComponents: .hourAndMinute)
+                    .labelsHidden()
         NavigationLink("Continue"){
             WeightView()
 
@@ -36,6 +39,3 @@ struct preferredSleepTime: View {
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
     }
 }
-
-// struct sleepTime: UIViewControllerRepresentable {
-// }
