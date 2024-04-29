@@ -35,11 +35,17 @@ struct DietGoalView: View {
             .toolbar {
                 EditButton()
             }
+            NavigationLink("Continue") {
+                FitnessGoalView()
+            }
+            .frame(width: 150, height: 35)
+            .font(.system(size: 20))
+            .bold()
+            .foregroundColor(.white)
+            .background(Color.CustomYellowDark)
+            .clipShape(RoundedRectangle(cornerRadius: 10.0))
         }
         
     }
 }
 
-#Preview {
-    DietGoalView()
-}
