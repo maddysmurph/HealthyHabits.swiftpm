@@ -11,7 +11,7 @@ import SwiftUI
 struct generatingView: View {
     var body: some View {
         VStack {
-            Text("Generating Your")
+            Text("Generate Your")
                 .font(.system(size: 40))
                 .foregroundColor(.black)
             Text("Health Plan")
@@ -31,5 +31,15 @@ struct generatingView: View {
                 .resizable()
                 .frame(width: 50, height: 50)
         }
+        NavigationLink("Go"){
+            HomeView()
+
+        }
+        .frame(width: 100, height: 40)
+        .font(.system(size: 20))
+        .bold()
+        .foregroundColor(.white)
+        .background(Color.CustomYellowDark)
+        .clipShape(RoundedRectangle(cornerRadius: 10.0))
     }
 }
