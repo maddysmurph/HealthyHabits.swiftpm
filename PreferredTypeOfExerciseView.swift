@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct PreferredTypeOfExercise: View {
-    @State var preferredexercisetype = false
+    @AppStorage ("PreferredExerciseType") var preferredexercisetype: Bool = false
     var body: some View {
         VStack {
             Text("Personalize")

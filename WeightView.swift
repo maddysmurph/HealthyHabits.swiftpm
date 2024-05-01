@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct WeightView: View {
-    @State var weight = false
+    @AppStorage ("Weight") var weight: Bool = false
     var body: some View {
         Text("Personalize")
             .font(.system(size: 45))
