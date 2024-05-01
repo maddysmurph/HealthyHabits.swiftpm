@@ -9,9 +9,16 @@ import Foundation
 import SwiftUI
 
 struct generatingView: View {
+    @AppStorage("Name") var name: String = ""
+    @AppStorage("Age") var age: Int = 0
+    @AppStorage("Sex") var sex: String = ""
+    @AppStorage("Weight") var weight: Int = 0
+    @AppStorage("Height") var height: Int = 0
+    @AppStorage ("Health Problem") var specificHealthCondition = ""
+    
     var body: some View {
         VStack {
-            Text("Generate Your")
+            Text("Generating Your")
                 .font(.system(size: 40))
                 .foregroundColor(.black)
             Text("Health Plan")
@@ -31,15 +38,22 @@ struct generatingView: View {
                 .resizable()
                 .frame(width: 50, height: 50)
         }
-        NavigationLink("Go"){
-            HomeView()
-
+        Text("Confirm the following information:")
+            .font(.system(size: 30))
+            .bold()
+            .foregroundColor(.CustomYellowDark)
+        Text("If information is incorrect or missing please select the back button as needed to edit previous question responses")
+            .font(.system(size: 15))
+            .bold()
+            .foregroundColor(.CustomYellowLight)
+        VStack(alignment: .leading){
+            Text("Name: \(name)")
+            Text("Age: \(age)")
+            Text("Sex: \(sex)")
+            Text("Weight: \(weight)")
+            Text("Height: \(height)")
+            Text("Health Condition: \(specificHealthCondition)")
         }
-        .frame(width: 100, height: 40)
-        .font(.system(size: 20))
-        .bold()
-        .foregroundColor(.white)
-        .background(Color.CustomYellowDark)
-        .clipShape(RoundedRectangle(cornerRadius: 10.0))
     }
+               
 }
