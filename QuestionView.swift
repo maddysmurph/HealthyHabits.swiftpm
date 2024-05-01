@@ -13,7 +13,7 @@ struct QuestionView: View {
     @AppStorage("Age") var age: Int = 0
     @AppStorage("Sex") var sex: String = ""
     @AppStorage("Weight") var weight: Int = 0
-    @AppStorage("Height") var height: String = ""
+    @AppStorage("Height") var height: Int = 0
     
     var body: some View {
             VStack{
@@ -36,7 +36,7 @@ struct QuestionView: View {
                         Text("Age: ")
                         Text("Sex: ")
                         Text("Weight (lbs): ")
-                        Text("Height: ")
+                        Text("Height (in): ")
                     }
                     .font(.system(size: 20))
                     
@@ -45,7 +45,7 @@ struct QuestionView: View {
                         TextField("Not Set", value: $age, format: .number)
                         TextField("Not Set", text: $sex)
                         TextField("Not Set", value: $weight, format: .number)
-                        TextField("Not Set", text: $height)
+                        TextField("Not Set", value: $height, format: .number)
                     }
                     .font(.system(size: 20))
                     .textFieldStyle(.roundedBorder)
