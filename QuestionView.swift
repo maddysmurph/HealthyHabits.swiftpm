@@ -36,7 +36,7 @@ struct QuestionView: View {
                         Text("Age: ")
                         Text("Sex: ")
                         Text("Weight (lbs): ")
-                        Text("Height: ")
+                        Text("Height (in): ")
                     }
                     .font(.system(size: 20))
                     

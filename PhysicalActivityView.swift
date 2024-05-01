@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct PhysicalActivityView: View {
-    @State var physicalactivity = false
+    @AppStorage ("PhysicalActivity") var physicalactivity: Bool = false
     var body: some View {
         VStack {
             Text("Personalize")
