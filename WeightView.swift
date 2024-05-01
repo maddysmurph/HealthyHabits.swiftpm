@@ -10,6 +10,11 @@ import SwiftUI
 
 struct WeightView: View {
     @AppStorage ("Weight") var weight: Bool = false
+    @State var backgroundColor1 = Color.CustomYellowLight
+    @State var backgroundColor2 = Color.CustomYellowLight
+    @State var backgroundColor3 = Color.CustomYellowLight
+    @State var backgroundColor4 = Color.CustomYellowLight
+    @State var backgroundColor5 = Color.CustomYellowLight
     var body: some View {
         Text("Personalize")
             .font(.system(size: 45))
@@ -28,43 +33,68 @@ struct WeightView: View {
         VStack(alignment: .center, spacing: 13) {
             Button("<5 lbs") {
                 weight = false
+                backgroundColor1 = Color.CustomYellowDark
+                backgroundColor2 = Color.CustomYellowLight
+                backgroundColor3 = Color.CustomYellowLight
+                backgroundColor4 = Color.CustomYellowLight
+                backgroundColor5 = Color.CustomYellowLight
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
-            .background(Color.CustomYellowLight)
+            .background(backgroundColor1)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
             Button("5-10 lbs") {
                 weight = false
+                backgroundColor2 = Color.CustomYellowDark
+                backgroundColor1 = Color.CustomYellowLight
+                backgroundColor3 = Color.CustomYellowLight
+                backgroundColor4 = Color.CustomYellowLight
+                backgroundColor5 = Color.CustomYellowLight
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
-            .background(Color.CustomYellowLight)
+            .background(backgroundColor2)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
             Button("11-16 lbs") {
                 weight = false
+                backgroundColor3 = Color.CustomYellowDark
+                backgroundColor2 = Color.CustomYellowLight
+                backgroundColor1 = Color.CustomYellowLight
+                backgroundColor4 = Color.CustomYellowLight
+                backgroundColor5 = Color.CustomYellowLight
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
-            .background(Color.CustomYellowLight)
+            .background(backgroundColor3)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
             Button("17-22 lbs") {
                 weight = false
+                backgroundColor4 = Color.CustomYellowDark
+                backgroundColor2 = Color.CustomYellowLight
+                backgroundColor3 = Color.CustomYellowLight
+                backgroundColor1 = Color.CustomYellowLight
+                backgroundColor5 = Color.CustomYellowLight
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
-            .background(Color.CustomYellowLight)
+            .background(backgroundColor4)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
             Button("23+ lbs") {
                 weight = false
+                backgroundColor5 = Color.CustomYellowDark
+                backgroundColor2 = Color.CustomYellowLight
+                backgroundColor3 = Color.CustomYellowLight
+                backgroundColor4 = Color.CustomYellowLight
+                backgroundColor1 = Color.CustomYellowLight
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
-            .background(Color.CustomYellowLight)
+            .background(backgroundColor5)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
             NavigationLink("Continue"){
                 generatingView()

@@ -10,6 +10,8 @@ import SwiftUI
 
 struct PreferredTypeOfExercise: View {
     @AppStorage ("PreferredExerciseType") var preferredexercisetype: Bool = false
+    @State var backgroundColor1 = Color.CustomYellowLight
+    @State var backgroundColor2 = Color.CustomYellowLight
     var body: some View {
         VStack {
             Text("Personalize")
@@ -29,19 +31,23 @@ struct PreferredTypeOfExercise: View {
 
             Button("Aerobic") {
                 preferredexercisetype = false
+                backgroundColor1 = Color.CustomYellowDark
+                backgroundColor2 = Color.CustomYellowLight
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
-            .background(Color.CustomYellowLight)
+            .background(backgroundColor1)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
             Button("Anaerobic") {
                 preferredexercisetype = true
+                backgroundColor2 = Color.CustomYellowDark
+                backgroundColor1 = Color.CustomYellowLight
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
-            .background(Color.CustomYellowLight)
+            .background(backgroundColor2)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
             NavigationLink("Continue"){
                 preferredSleepTime()
