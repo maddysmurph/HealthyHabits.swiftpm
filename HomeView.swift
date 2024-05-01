@@ -24,21 +24,26 @@ struct HomeView: View {
             Divider()
             HStack {
                 RoundedRectangle(cornerRadius: 65)
-                    .size(width: 200, height: 265)
+                    .size(width: 180, height: 265)
                     .foregroundColor(.CustomGreenLight)
                     .padding([.leading])
-
+                    .offset(x: 5, y: 15)
                 RoundedRectangle(cornerRadius: 45)
                     .size(width: 150, height: 150)
-                    .foregroundColor(.blue)
+                    .foregroundColor(.CustomBlueLight)
                     .padding([.leading])
+                    .offset(x: 5, y: 150)
             }
-        
+                VStack {
+                    RoundedRectangle(cornerRadius: 65)
+                        .size(width: 350, height: 200)
+                        .foregroundColor(.CustomPinkLight)
+                        .padding([.leading])
+                        .offset(x: 5, y: 0)
+                }
+//            TabView {
+//            }
         }
-        RoundedRectangle(cornerRadius: 65)
-            .size(width: 360, height: 200)
-            .foregroundColor(.CustomPinkLight)
-            .padding([.leading])
     }
 }
 extension Color {
@@ -46,4 +51,7 @@ extension Color {
 }
 extension Color {
     static let CustomPinkLight = Color (red: 255/255, green: 224/255, blue: 233/255)
+}
+extension Color {
+    static let CustomBlueLight = Color (red: 170/255, green: 216/255, blue: 230/255)
 }
