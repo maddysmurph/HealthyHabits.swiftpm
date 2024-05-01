@@ -54,6 +54,9 @@ struct generatingView: View {
             Text("Height: \(height)")
             Text("Health Condition: \(specificHealthCondition)")
         }
+        NavigationLink("Home") {
+            HomeView()
+        }
     }
                
 }

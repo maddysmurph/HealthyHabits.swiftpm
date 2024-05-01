@@ -28,7 +28,7 @@ struct preferredSleepTime: View {
         DatePicker("", selection: $currentDate, displayedComponents: .hourAndMinute)
                     .labelsHidden()
         NavigationLink("Continue"){
-            WeightView()
+            DietGoalView()
 
         }
         .frame(width: 200, height: 40)
