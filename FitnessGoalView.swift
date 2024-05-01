@@ -26,18 +26,16 @@ struct FitnessGoalView: View {
     @State private var multiselection = Set<UUID>()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                List(fitnessGoals, selection: $multiselection) { fitnessGoal in
-                    Text(fitnessGoal.mainGoal)
+       
+        VStack {
+            List(fitnessGoals, selection: $multiselection) { fitnessGoal in
+                Text(fitnessGoal.mainGoal)
+            }
+            Text("\(multiselection.count) selections")
+                .navigationTitle("Fitness Goals")
+                .toolbar {
+                    EditButton()
                 }
-                Text("\(multiselection.count) selections")
-            }
-            .navigationTitle("Fitness Goals")
-            .toolbar {
-                EditButton()
-            }
-            
             NavigationLink("Continue") {
                 WeightView()
             }

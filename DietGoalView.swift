@@ -24,17 +24,16 @@ struct DietGoalView: View {
         DietGoal(diets: "Nutritious"),
         DietGoal(diets: "Cutting Sugar")]
     var body: some View {
-        NavigationView {
-            VStack {
-                List(dietGoals, selection: $multiSelection) { dietGoal in
-                    Text(dietGoal.diets)
+        VStack {
+            List(dietGoals, selection: $multiSelection) { dietGoal in
+                Text(dietGoal.diets)
+            }
+            Text("\(multiSelection.count) selections")
+            
+                .navigationTitle("Diet Goals")
+                .toolbar {
+                    EditButton()
                 }
-                Text("\(multiSelection.count) selections")
-            }
-            .navigationTitle("Diet Goals")
-            .toolbar {
-                EditButton()
-            }
             NavigationLink("Continue") {
                 FitnessGoalView()
             }

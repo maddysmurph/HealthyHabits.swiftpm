@@ -60,7 +60,7 @@ struct HealthConditionView: View {
                 
                 Divider()
                 
-                NavigationLink("Next"){
+                NavigationLink("Continue"){
                     PhysicalActivityView()
                     
                 }
