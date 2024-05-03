@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    @AppStorage("Name") var name: String = ""
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Hello")
+                Text("Hello \(name)")
                     .font(.system(size: 50))
                     .foregroundColor(.black)
                     .bold()
@@ -28,7 +29,6 @@ struct HomeView: View {
                     .foregroundColor(.CustomGreenLight)
                     .padding([.leading])
                     .offset(x: 5, y: 15)
-                    .overlay("Get", alignment: <#T##Alignment#>)
                 RoundedRectangle(cornerRadius: 45)
                     .size(width: 150, height: 150)
                     .foregroundColor(.CustomBlueLight)
