@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 struct MedicationView: View {
-    @State var Medication = false
-    @State var Medicationtime = ""
+    @AppStorage("Medication") var Medication: Bool = false
+    @AppStorage("MedicationTime") var Medicationtime: String = ""
     var body: some View {
         
         Text("Personalize")

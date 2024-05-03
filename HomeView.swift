@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    @AppStorage("Name") var name: String = ""
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Hello")
+                Text("Hello \(name)")
                     .font(.system(size: 50))
                     .foregroundColor(.black)
                     .bold()
