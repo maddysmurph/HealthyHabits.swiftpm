@@ -34,33 +34,39 @@ struct HomeView: View {
                         Text("Get")
                             .font(.system(size: 30))
                             .foregroundColor(.black)
-                            .offset(x: -25, y: -60)
+                            .offset(x: -25, y: 13)
                         Text("Food")
-                            .font(.system(size: 40))
+                            .font(.system(size: 50))
                             .foregroundColor(.CustomGreenDark)
-                            .offset(x: -20, y: -65)
+                            .offset(x: -10, y: 5)
                             .bold()
                         Text("Inspo")
                             .font(.system(size: 30))
                             .foregroundColor(.black)
-                            .offset(x: -24, y: -72)
+                            .offset(x: -30, y: -5)
+                        VStack {
+                            Image("foodinspothumbnail")
+                                .resizable()
+                                .clipShape(Circle())
+                                .frame(width: 120, height: 120)
+                                .offset(x: 12, y: -25)
+                        }
                     }
-                    Button(action: {
+                    NavigationLink {
                         FoodView()
-                    }, label: {
+                    } label: {
                         Image(systemName: "arrowshape.right.circle.fill")
                             .resizable()
                             .frame(width: 60, height: 60)
                             .foregroundColor(.CustomYellowDark)
                             .offset(x: 60, y: -40)
-                    })
+                    }
+                    RoundedRectangle(cornerRadius: 45)
+                        .size(width: 150, height: 150)
+                        .foregroundColor(.CustomBlueLight)
+                        .padding([.leading])
+                        .offset(x: 5, y: 150)
                 }
-                RoundedRectangle(cornerRadius: 45)
-                    .size(width: 150, height: 150)
-                    .foregroundColor(.CustomBlueLight)
-                    .padding([.leading])
-                    .offset(x: 5, y: 150)
-            }
                 VStack {
                     RoundedRectangle(cornerRadius: 65)
                         .size(width: 350, height: 200)
@@ -68,8 +74,9 @@ struct HomeView: View {
                         .padding([.leading])
                         .offset(x: 5, y: 0)
                 }
-//            TabView {
-//            }
+                //            TabView {
+                //            }
+            }
         }
     }
 }

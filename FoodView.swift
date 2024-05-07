@@ -6,13 +6,40 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct FoodView: View {
-    var body: some View {
-        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Hello, world!@*/Text("Hello, world!")/*@END_MENU_TOKEN@*/
-    }
-}
+    // 1
+    @State private var isPresentWebView = false
 
-#Preview {
-    FoodView()
+    
+    var body: some View {
+        Button("Open WebView") {
+            // 2
+            isPresentWebView = true
+
+        }
+        .sheet(isPresented: $isPresentWebView) {
+            NavigationStack {
+                // 3
+                WebView(url: URL(string: "https://www.delish.com/cooking/recipe-ideas/g3733/healthy-dinner-recipes/
+")!)
+
+                    .ignoresSafeArea()
+                    .navigationTitle("Sarunw")
+                    .navigationBarTitleDisplayMode(.inline)
+                                 
+                                 
+                                 let url: URL
+                                 func makeUIView(context: Context) -> WKWebView {
+                                     return WKWebView()
+                                 }
+                                 func updateUIView(_ webView: WKWebView, context: Context) {
+                                     
+                                     let request = URLRequest(url: url)
+                                     webView.load(request)
+                                 }
+            }
+        }
+    }
 }
