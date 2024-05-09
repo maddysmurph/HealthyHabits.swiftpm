@@ -10,7 +10,9 @@ import SwiftUI
 struct HomeView: View {
     @AppStorage("Name") var name: String = ""
     var body: some View {
+        
         VStack(alignment: .leading) {
+            
             HStack {
                 Text("Hello \(name)")
                     .font(.system(size: 50))
@@ -85,7 +87,18 @@ struct HomeView: View {
                     .padding([.leading])
                     .offset(x: 5, y: -165)
             }
+            TabView{
+                HomeView()
+                    .tabItem {
+                        Text("Home")
+                    }
+                AboutView()
+                    .tabItem {
+                        Text("My Profile")
+                    }
             }
+            }
+        
         }
     }
     extension Color {

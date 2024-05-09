@@ -87,6 +87,9 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .background(Color.CustomYellowDark)
                             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                            NavigationLink("Home") {
+                                HomeView()
+                            }
                             VStack {
                                 if !permissionGranted {
                                     Button("Click to allow notifications") {
