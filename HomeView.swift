@@ -23,72 +23,84 @@ struct HomeView: View {
                 .foregroundColor(.black)
                 .padding([.leading])
             Divider()
-            HStack {
-                ZStack {
+            VStack {
+                HStack {
                     RoundedRectangle(cornerRadius: 65)
                         .size(width: 180, height: 265)
                         .foregroundColor(.CustomGreenLight)
                         .padding([.leading])
                         .offset(x: 5, y: 15)
-                    VStack {
-                        Text("Get")
-                            .font(.system(size: 30))
-                            .foregroundColor(.black)
-                            .offset(x: -25, y: 13)
-                        Text("Food")
-                            .font(.system(size: 50))
-                            .foregroundColor(.CustomGreenDark)
-                            .offset(x: -10, y: 5)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 45)
+                            .size(width: 150, height: 150)
+                            .foregroundColor(.CustomBlueLight)
+                            .padding([.leading])
+                            .offset(x: 5, y: 150)
+                        Text("Sleep")
+                            .font(.system(size: 35))
+                            .foregroundColor(.CustomBlueDark)
                             .bold()
-                        Text("Inspo")
-                            .font(.system(size: 30))
+                            .offset(x: 20, y: 120)
+                        Text("Reminder")
+                            .font(.system(size: 20))
                             .foregroundColor(.black)
-                            .offset(x: -30, y: -5)
-                        VStack {
-                            Image("foodinspothumbnail")
-                                .resizable()
-                                .clipShape(Circle())
-                                .frame(width: 120, height: 120)
-                                .offset(x: 12, y: -25)
-                        }
+                            .offset(x: 18, y: 150)
                     }
-                    NavigationLink {
-                        FoodView()
-                    } label: {
-                        Image(systemName: "arrowshape.right.circle.fill")
-                            .resizable()
-                            .frame(width: 60, height: 60)
-                            .foregroundColor(.CustomYellowDark)
-                            .offset(x: 60, y: -40)
-                    }
-                    RoundedRectangle(cornerRadius: 45)
-                        .size(width: 150, height: 150)
-                        .foregroundColor(.CustomBlueLight)
-                        .padding([.leading])
-                        .offset(x: 5, y: 150)
                 }
                 VStack {
-                    RoundedRectangle(cornerRadius: 65)
-                        .size(width: 350, height: 200)
-                        .foregroundColor(.CustomPinkLight)
-                        .padding([.leading])
-                        .offset(x: 5, y: 0)
+                    Text("Get")
+                        .font(.system(size: 30))
+                        .foregroundColor(.black)
+                        .offset(x: -140, y: -110)
+                    Text("Food")
+                        .font(.system(size: 50))
+                        .foregroundColor(.CustomGreenDark)
+                        .offset(x: -90, y: -120)
+                        .bold()
+                    Text("Inspo")
+                        .font(.system(size: 30))
+                        .foregroundColor(.black)
+                        .offset(x: -60, y: -130)
+                    VStack {
+                        Image("foodinspothumbnail")
+                            .resizable()
+                            .clipShape(Circle())
+                            .frame(width: 100, height: 100)
+                            .offset(x: -90, y: -140)
+                    }
                 }
-                //            TabView {
-                //            }
+                
+                NavigationLink {
+                    FoodView()
+                } label: {
+                    Image(systemName: "arrowshape.right.circle.fill")
+                        .resizable()
+                        .frame(width: 60, height: 60)
+                        .foregroundColor(.white)
+                        .offset(x: -90, y: -225)
+                }
+                RoundedRectangle(cornerRadius: 65)
+                    .size(width: 350, height: 200)
+                    .foregroundColor(.CustomPinkLight)
+                    .padding([.leading])
+                    .offset(x: 5, y: -165)
+            }
             }
         }
     }
-}
+    extension Color {
+        static let CustomGreenLight = Color (red: 201/255, green: 238/255, blue: 145/255)
+    }
+    extension Color {
+        static let CustomGreenDark = Color (red: 34/255, green: 139/255, blue: 34/255)
+    }
+    extension Color {
+        static let CustomPinkLight = Color (red: 255/255, green: 224/255, blue: 233/255)
+    }
+    extension Color {
+        static let CustomBlueLight = Color (red: 170/255, green: 216/255, blue: 230/255)
+    }
 extension Color {
-    static let CustomGreenLight = Color (red: 201/255, green: 238/255, blue: 145/255)
+    static let CustomBlueDark = Color (red: 15/255, green: 82/255, blue: 180/255)
 }
-extension Color {
-    static let CustomGreenDark = Color (red: 34/255, green: 139/255, blue: 34/255)
-}
-extension Color {
-    static let CustomPinkLight = Color (red: 255/255, green: 224/255, blue: 233/255)
-}
-extension Color {
-    static let CustomBlueLight = Color (red: 170/255, green: 216/255, blue: 230/255)
-}
+
