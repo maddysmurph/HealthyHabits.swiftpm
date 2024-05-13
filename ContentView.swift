@@ -76,7 +76,7 @@ struct ContentView: View {
                         }
                         Divider()
                             .padding(20.0)
-                        VStack(alignment: .center, spacing: 30){
+                        VStack(alignment: .center, spacing: 10){
                             NavigationLink("Get Started") {
                                 QuestionView()
                                 
@@ -87,31 +87,24 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .background(Color.CustomYellowDark)
                             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                            
+                            Text("Already Entered Your Information?")
+                                .font(.system(size: 20))
+                                
+                                .foregroundColor(.black)
+                            Text("Click Below:")
+                                .font(.system(size: 20))
+                               
+                                .foregroundColor(.black)
                             NavigationLink("Home") {
                                 HomeView()
                             }
-                            VStack {
-                                if !permissionGranted {
-                                    Button("Click to allow notifications") {
-                                        requestPermissions()
-                                    }
-                                }
-
-                                if permissionGranted {
-                                    Button("Send Notification") {
-                                        sendNotification()
-                                    }
-                                }
-                            }
-                            .onAppear {
-                                // Check if we already have permissions to send notifications
-                                UNUserNotificationCenter.current().getNotificationSettings { settings in
-                                    if settings.authorizationStatus == .authorized {
-                                        permissionGranted = true
-                                    }
-                                }
-                            }
-                            .padding()
+                            .frame(width: 150, height: 40)
+                            .font(.system(size: 20))
+                            .bold()
+                            .foregroundColor(.white)
+                            .background(Color.CustomYellowDark)
+                            .clipShape(RoundedRectangle(cornerRadius: 10.0))
                             
                         }
                     }
