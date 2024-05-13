@@ -38,25 +38,15 @@ struct generatingView: View {
                 .resizable()
                 .frame(width: 50, height: 50)
         }
-        Text("Confirm the following information:")
-            .font(.system(size: 30))
-            .bold()
-            .foregroundColor(.CustomYellowDark)
-        Text("If information is incorrect or missing please select the back button as needed to edit previous question responses")
-            .font(.system(size: 15))
-            .bold()
-            .foregroundColor(.CustomYellowLight)
-        VStack(alignment: .leading){
-            Text("Name: \(name)")
-            Text("Age: \(age)")
-            Text("Sex: \(sex)")
-            Text("Weight: \(weight)")
-            Text("Height: \(height)")
-            Text("Health Condition: \(specificHealthCondition)")
-        }
         NavigationLink("Home") {
             HomeView()
         }
+        .frame(width: 150, height: 40)
+        .font(.system(size: 20))
+        .bold()
+        .foregroundColor(.white)
+        .background(Color.CustomYellowDark)
+        .clipShape(RoundedRectangle(cornerRadius: 10.0))
     }
                
 }

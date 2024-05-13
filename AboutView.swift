@@ -41,6 +41,26 @@ struct AboutView: View {
         Text("Medication Time: \(Medicationtime)")
         Text("Physical Activity: \(physicalactivity)")
         Text("Preferred Exercise: \(preferredexercisetype)")
+        
+        HStack{
+            NavigationLink{
+                trackerView()
+            } label: {
+                Image(systemName: "pin")
+            }
+            
+            NavigationLink{
+                HomeView()
+            } label: {
+                Image(systemName: "house")
+            }
+            
+            NavigationLink{
+                AboutView()
+            }label: {
+                Image(systemName: "person")
+            }
+        }
     }
 }
 
