@@ -71,7 +71,6 @@ struct HomeView: View {
                             .offset(x: -90, y: -140)
                     }
                 }
-                
                 NavigationLink {
                     FoodView()
                 } label: {
