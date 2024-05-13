@@ -87,18 +87,26 @@ struct HomeView: View {
                     .padding([.leading])
                     .offset(x: 5, y: -165)
             }
-            TabView{
+                        }
+        HStack{
+            NavigationLink{
+                trackerView()
+            } label: {
+                Image(systemName: "pin")
+            }
+            
+            NavigationLink{
                 HomeView()
-                    .tabItem {
-                        Text("Home")
-                    }
+            } label: {
+                Image(systemName: "house")
+            }
+            
+            NavigationLink{
                 AboutView()
-                    .tabItem {
-                        Text("My Profile")
-                    }
+            }label: {
+                Image(systemName: "person")
             }
-            }
-        
+        }
         }
     }
     extension Color {
