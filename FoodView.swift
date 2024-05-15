@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import WebKit
 
 struct FoodView: View {
     var body: some View {
@@ -20,20 +19,11 @@ struct FoodView: View {
             NavigationLink("Keto"){
                 KetoView()
             }
-            NavigationLink("Balanced"){
-                BalancedView()
-            }
             NavigationLink("Calorie Control"){
                 CalorieControlView()
             }
-            NavigationLink("Hydrated"){
-                HydratedView()
-            }
             NavigationLink("Nutritious"){
                 NutritiousView()
-            }
-            NavigationLink("Cutting Sugar"){
-                CuttingSugarView()
             }
         }
     }

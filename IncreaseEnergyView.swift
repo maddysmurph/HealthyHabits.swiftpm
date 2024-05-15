@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IncreaseView: View {
+struct IncreaseEnergyView: View {
     var body: some View {
     }
 }

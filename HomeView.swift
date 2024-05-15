@@ -80,11 +80,22 @@ struct HomeView: View {
                         .foregroundColor(.white)
                         .offset(x: -90, y: -225)
                 }
-                RoundedRectangle(cornerRadius: 65)
-                    .size(width: 350, height: 200)
-                    .foregroundColor(.CustomPinkLight)
-                    .padding([.leading])
-                    .offset(x: 5, y: -165)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 65)
+                        .size(width: 350, height: 200)
+                        .foregroundColor(.CustomPinkLight)
+                        .padding([.leading])
+                        .offset(x: 5, y: -150)
+                    Text("Exercises")
+                        .font(.system(size: 35))
+                        .foregroundColor(.CustomPinkDark)
+                        .offset(x: -60, y: -150)
+                        .bold()
+                    Text("Recommended for you")
+                        .font(.system(size: 25))
+                        .foregroundColor(.black)
+                        .offset(x: -65, y: -100)
+                }
             }
                         }
         HStack{
@@ -116,6 +127,9 @@ struct HomeView: View {
     }
     extension Color {
         static let CustomPinkLight = Color (red: 255/255, green: 224/255, blue: 233/255)
+    }
+    extension Color {
+        static let CustomPinkDark = Color (red: 170, green: 51/255, blue: 106/255)
     }
     extension Color {
         static let CustomBlueLight = Color (red: 170/255, green: 216/255, blue: 230/255)
