@@ -8,58 +8,53 @@
 import SwiftUI
 
 struct VegetarianView: View {
+    let KungPaoURL = URL(string: "https://www.foodnetwork.com/recipes/food-network-kitchen/kung-pao-cauliflower-5339620")!
+    let FusilliPastaURL = URL(string: "https://themodernproper.com/fusilli-pasta-with-spicy-tomato-sauce")!
+    let BrocolliURL = URL(string: "https://themodernproper.com/broccoli-cheddar-soup")!
+    let SevenLayerURL = URL(string: "https://themodernproper.com/seven-layer-dip")!
+    let creamyURL = URL(string: "https://themodernproper.com/creamy-cavatappi")!
+    
     var body: some View {
-        ZStack{
-            RoundedRectangle(cornerRadius: 45)
-                .size(width: 180, height: 265)
-                .foregroundColor(.CustomBlueLight)
-            HStack{
-                Text("Broccoli Cheddar Soup")
-                    .font(.system(size: 35))
-                    .foregroundColor(.black)
-                    .bold()
-                Text("-Salted Butter")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-Onion")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-Garlic")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-All Purpose Flour")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-Sea Salt")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-Mustard Powder")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-Nutmeg")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-Whole milk or half-and-half")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-Vegetable Stock")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-Broccoli")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-Parmesan")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-Extra-sharp cheddar cheese")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-                Text("-Black pepper")
-                    .font(.system(size: 15))
-                    .foregroundColor(.black)
-            }
+        VStack{
+            Button(action: {
+                Link("Kung Pao Caudiflower", destination: KungPaoURL)
+            }, label: {
+                Image("1")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+            })
+            
+            Button(action: {
+                Link("Fusilli Pasta with Spicy Red Tomatoe Sauce", destination: FusilliPastaURL)
+            }, label: {
+                Image("2")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+            })
+            Button(action: {
+                Link("Brocolli Cheddar Soup", destination: BrocolliURL)
+            }, label: {
+                Image("3")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+            })
+            Button(action: {
+                Link("7 Layer Dip", destination: SevenLayerURL)
+            }, label: {
+                Image("4")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+            })
+            Button(action: {
+                Link("Creamy Cavatappi", destination: creamyURL)
+            }, label: {
+                Image("5")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+            })
         }
     }
+    
 }
 
 #Preview {
