@@ -17,6 +17,7 @@ let package = Package(
             name: "HealthyHabits",
             targets: ["AppModule"],
             bundleIdentifier: "org.jhhs.626284.HealthyHabits",
+            teamIdentifier: "U4YAT939D4",
             displayVersion: "1.0",
             bundleVersion: "1",
             appIcon: .asset("AppIcon"),
