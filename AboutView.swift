@@ -30,40 +30,52 @@ struct AboutView: View {
         Text("Information:")
             .font(.system(size: 20))
             .bold()
-        Text("Name: \(name)")
-        Text("Age: \(age)")
-        Text("Sex: \(sex)")
-        Text("Weight: \(weight)")
-        Text("Height: \(height)")
-        Text("Health Condition: \(healthCondition)")
-        Text("Health Problem: \(specificHealthCondition)")
-        Text("Medication: \(Medication)")
-        Text("Medication Time: \(Medicationtime)")
-        Text("Physical Activity: \(physicalactivity)")
-        Text("Preferred Exercise: \(preferredexercisetype)")
-        
-        HStack{
+        VStack(alignment: .leading, spacing: 10){
+            
+            
+            Text("Name: \(name)")
+            Text("Age: \(age)")
+            Text("Sex: \(sex)")
+            Text("Weight: \(weight)")
+            Text("Height: \(height)")
+            Text("Health Condition: \(healthCondition)")
+            Text("Health Problem: \(specificHealthCondition)")
+            Text("Medication: \(Medication)")
+            Text("Medication Time: \(Medicationtime)")
+            Text("Physical Activity: \(physicalactivity)")
+            Text("Preferred Exercise: \(preferredexercisetype)")
+        }
+        .font(.system(size: 20))
+        HStack(spacing: 20){
             NavigationLink{
                 trackerView()
             } label: {
                 Image(systemName: "pin")
+                    .resizable()
+                    .frame(width: 40, height: 60)
+                    .foregroundColor(.white)
             }
             
             NavigationLink{
                 HomeView()
             } label: {
-                Image(systemName: "house")
+                Image(systemName: "house.circle")
+                    .resizable()
+                    .frame(width: 85, height: 80)
+                    .foregroundColor(.white)
             }
             
             NavigationLink{
                 AboutView()
             }label: {
                 Image(systemName: "person")
+                    .resizable()
+                    .frame(width: 55, height: 60)
+                    .foregroundColor(.white)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: 130)
+        .background(Color.CustomYellowLight)
     }
 }
 
-#Preview {
-    AboutView()
-}

@@ -16,11 +16,11 @@ let package = Package(
         .iOSApplication(
             name: "HealthyHabits",
             targets: ["AppModule"],
-            bundleIdentifier: "org.jhhs.626284.HealthyHabits",
+            bundleIdentifier: "org.jhhs.HealthyHabits",
             teamIdentifier: "U4YAT939D4",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .asset("AppIcon"),
+            appIcon: .placeholder(icon: .carrot),
             accentColor: .presetColor(.yellow),
             supportedDeviceFamilies: [
                 .pad,
