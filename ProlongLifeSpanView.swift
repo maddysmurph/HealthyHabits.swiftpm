@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProlongLifeSpanView: View {
     var body: some View {
+        VStack{}
     }
 }
 

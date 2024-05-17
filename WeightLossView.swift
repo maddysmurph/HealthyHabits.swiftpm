@@ -9,5 +9,6 @@ import SwiftUI
 
 struct WeightLossView: View {
     var body: some View {
+        VStack{}
     }
 }

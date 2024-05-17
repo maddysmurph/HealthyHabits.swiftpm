@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ImprovePostureView: View {
     var body: some View {
+        VStack{}
     }
 }
 

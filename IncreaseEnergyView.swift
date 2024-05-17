@@ -9,6 +9,7 @@ import SwiftUI
 
 struct IncreaseEnergyView: View {
     var body: some View {
+        VStack{}
     }
 }
 
