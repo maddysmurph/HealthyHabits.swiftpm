@@ -22,41 +22,46 @@ struct WeightLossView: View {
         }
         Divider()
         VStack{
-            HStack(alignment: .center, spacing: 20){
+            HStack {
                 Text("Running")
-                    .frame(width: 300, height: 40)
+                    .frame(width: 200, height: 40)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.white)
-                    .background(Color.CustomYellowDark)
+                    .background(Color.CustomPinkLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10.0))
                 Text("Biking")
-                    .frame(width: 300, height: 40)
+                    .frame(width: 200, height: 40)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.white)
-                    .background(Color.CustomYellowDark)
+                    .background(Color.CustomPinkLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            }
+            HStack {
                 Text("Burpees")
-                    .frame(width: 300, height: 40)
+                    .frame(width: 200, height: 40)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.white)
-                    .background(Color.CustomYellowDark)
+                    .background(Color.CustomPinkLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10.0))
                 Text("Swimming")
-                    .frame(width: 300, height: 40)
+                    .frame(width: 200, height: 40)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.white)
-                    .background(Color.CustomYellowDark)
+                    .background(Color.CustomPinkLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            }
+                
+            HStack {
                 Text("Jumping Jacks")
-                    .frame(width: 300, height: 40)
+                    .frame(width: 200, height: 40)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.white)
-                    .background(Color.CustomYellowDark)
+                    .background(Color.CustomPinkLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10.0))
             }
         }
