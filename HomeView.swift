@@ -71,14 +71,8 @@ struct HomeView: View {
                             .offset(x: -90, y: -140)
                     }
                 }
-                NavigationLink {
+                NavigationLink("Go") {
                     FoodView()
-                } label: {
-                    Image(systemName: "arrowshape.right.circle.fill")
-                        .resizable()
-                        .frame(width: 60, height: 60)
-                        .foregroundColor(.white)
-                        .offset(x: -90, y: -225)
                 }
                 ZStack {
                     RoundedRectangle(cornerRadius: 65)
@@ -95,37 +89,43 @@ struct HomeView: View {
                         .font(.system(size: 25))
                         .foregroundColor(.black)
                         .offset(x: -65, y: -100)
-                    NavigationLink {
+                    NavigationLink("Go") {
                         ExerciseView()
-                    } label: {
-                        Image(systemName: "arrowshape.right.circle.fill")
-                            .resizable()
-                            .frame(width: 60, height: 60)
-                            .foregroundColor(.white)
-                            .offset(x: -90, y: -150)
                     }
                 }
             }
-            HStack{
-                NavigationLink{
-                    trackerView()
-                } label: {
-                    Image(systemName: "pin")
-                }
-                
-                NavigationLink{
-                    HomeView()
-                } label: {
-                    Image(systemName: "house")
-                }
-                
-                NavigationLink{
-                    AboutView()
-                }label: {
-                    Image(systemName: "person")
-                }
+            
+        }
+        HStack(spacing: 20){
+            NavigationLink{
+                trackerView()
+            } label: {
+                Image(systemName: "pin")
+                    .resizable()
+                    .frame(width: 40, height: 60)
+                    .foregroundColor(.white)
+            }
+            
+            NavigationLink{
+                HomeView()
+            } label: {
+                Image(systemName: "house.circle")
+                    .resizable()
+                    .frame(width: 85, height: 80)
+                    .foregroundColor(.white)
+            }
+            
+            NavigationLink{
+                AboutView()
+            }label: {
+                Image(systemName: "person")
+                    .resizable()
+                    .frame(width: 55, height: 60)
+                    .foregroundColor(.white)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: 100)
+        .background(Color.CustomYellowLight)
     }
 }
     extension Color {
