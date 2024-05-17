@@ -95,30 +95,39 @@ struct HomeView: View {
                         .font(.system(size: 25))
                         .foregroundColor(.black)
                         .offset(x: -65, y: -100)
+                    NavigationLink {
+                        ExerciseView()
+                    } label: {
+                        Image(systemName: "arrowshape.right.circle.fill")
+                            .resizable()
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(.white)
+                            .offset(x: -90, y: -150)
+                    }
                 }
             }
-                        }
-        HStack{
-            NavigationLink{
-                trackerView()
-            } label: {
-                Image(systemName: "pin")
+            HStack{
+                NavigationLink{
+                    trackerView()
+                } label: {
+                    Image(systemName: "pin")
+                }
+                
+                NavigationLink{
+                    HomeView()
+                } label: {
+                    Image(systemName: "house")
+                }
+                
+                NavigationLink{
+                    AboutView()
+                }label: {
+                    Image(systemName: "person")
+                }
             }
-            
-            NavigationLink{
-                HomeView()
-            } label: {
-                Image(systemName: "house")
-            }
-            
-            NavigationLink{
-                AboutView()
-            }label: {
-                Image(systemName: "person")
-            }
-        }
         }
     }
+}
     extension Color {
         static let CustomGreenLight = Color (red: 201/255, green: 238/255, blue: 145/255)
     }
@@ -134,7 +143,8 @@ struct HomeView: View {
     extension Color {
         static let CustomBlueLight = Color (red: 170/255, green: 216/255, blue: 230/255)
     }
-extension Color {
-    static let CustomBlueDark = Color (red: 15/255, green: 82/255, blue: 180/255)
-}
+    extension Color {
+        static let CustomBlueDark = Color (red: 15/255, green: 82/255, blue: 180/255)
+    }
+    
 
