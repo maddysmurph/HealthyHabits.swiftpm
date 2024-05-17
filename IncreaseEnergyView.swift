@@ -20,6 +20,50 @@ struct IncreaseEnergyView: View {
                 .bold()
                 .padding([.leading])
         }
+        Divider()
+        VStack{
+            HStack {
+                Text("Biking")
+                    .frame(width: 200, height: 40)
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundColor(.white)
+                    .background(Color.CustomPinkLight)
+                    .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                Text("Walking")
+                    .frame(width: 200, height: 40)
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundColor(.white)
+                    .background(Color.CustomPinkLight)
+                    .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            }
+            HStack {
+                Text("Mountain Climbers")
+                    .frame(width: 200, height: 40)
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundColor(.white)
+                    .background(Color.CustomPinkLight)
+                    .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                Text("Dance")
+                    .frame(width: 200, height: 40)
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundColor(.white)
+                    .background(Color.CustomPinkLight)
+                    .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            }
+            
+            HStack {
+                Text("Upward Dog Stretch")
+                    .frame(width: 200, height: 40)
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundColor(.white)
+                    .background(Color.CustomPinkLight)
+                    .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            }
+        }
     }
 }
-

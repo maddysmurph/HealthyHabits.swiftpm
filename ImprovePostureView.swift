@@ -19,7 +19,51 @@ struct ImprovePostureView: View {
                 .foregroundColor(.CustomPinkDark)
                 .bold()
                 .padding([.leading])
+            Divider()
+            VStack{
+                HStack {
+                    Text("Plank")
+                        .frame(width: 200, height: 40)
+                        .font(.system(size: 20))
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(Color.CustomPinkLight)
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                    Text("Cat Cow Stretches")
+                        .frame(width: 200, height: 40)
+                        .font(.system(size: 20))
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(Color.CustomPinkLight)
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                }
+                HStack {
+                    Text("Downward Dog Pose")
+                        .frame(width: 200, height: 40)
+                        .font(.system(size: 20))
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(Color.CustomPinkLight)
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                    Text("Bird Dog Exercise")
+                        .frame(width: 200, height: 40)
+                        .font(.system(size: 20))
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(Color.CustomPinkLight)
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                }
+                
+                HStack {
+                    Text("Bridge")
+                        .frame(width: 200, height: 40)
+                        .font(.system(size: 20))
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(Color.CustomPinkLight)
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                }
+            }
         }
     }
 }
-
