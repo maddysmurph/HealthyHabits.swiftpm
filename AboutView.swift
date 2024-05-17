@@ -48,7 +48,7 @@ struct AboutView: View {
         .font(.system(size: 20))
         HStack(spacing: 20){
             NavigationLink{
-                trackerView()
+                TrackerView()
             } label: {
                 Image(systemName: "pin")
                     .resizable()

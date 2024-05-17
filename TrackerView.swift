@@ -1,50 +1,94 @@
 import SwiftUI
 
-struct trackerView: View {
-    @State var Meals: [Meal] = []
+struct TrackerView: View {
+    @State var meals: [Meal] = []
     @State var newFoodItem: String = ""
-    @State var newcalorieAmount: Int = 0
+    @State var newCalorieAmount: Int = 0
+    @State var currentDate: Date = Date()
+    
+    // UserDefaults key
+    let mealsKey = "meals"
     
     var body: some View {
         VStack {
-            Text("Track Your Daily Meals!")
-                .font(.system(size: 50))
-                .foregroundColor(.black)
-                .bold()
-            
-            HStack {
-                TextField("Enter Food Eaten Here", text: $newFoodItem)
-                    .textFieldStyle(.roundedBorder)
-                
-                TextField("Enter Calorie Value Here", value: $newcalorieAmount, format: .number)
-                    .textFieldStyle(.roundedBorder)
-                
+            VStack(alignment: .leading){
+                Text("Track Your Daily Meals!")
+                    .font(.system(size: 50))
+                    .foregroundColor(.black)
+                    .bold()
+                Text("Total Calories: \(totalCaloriesForToday())")
+            }
+            VStack {
+                HStack{
+                    Text("Enter Food Name:")
+                    TextField("", text: $newFoodItem)
+                        .textFieldStyle(.roundedBorder)
+                }
+                HStack{
+                    Text("Enter Calorie Value:")
+                    TextField("", value: $newCalorieAmount, formatter: NumberFormatter())
+                        .textFieldStyle(.roundedBorder)
+                }
                 Button("+") {
-                    let newItem = Meal(foodType: newFoodItem, calories: newcalorieAmount)
-                    Meals.append(newItem)
+                    let newItem = Meal(foodType: newFoodItem, calories: newCalorieAmount, date: currentDate)
+                    meals.append(newItem)
+                    saveMeals()
                     
                     newFoodItem = ""
-                    newcalorieAmount = 0
+                    newCalorieAmount = 0
                 }
-                .frame(width: 30, height: 30)
-                .background(Color.yellow) // You can use predefined color directly
+                .font(.system(size: 30))
+                .frame(width: 100, height: 50)
+                .background(Color.yellow)
                 .foregroundColor(.white)
-                .cornerRadius(5) // Added corner radius for better appearance
-                .padding() // Added padding for better spacing
-            }
-            
-            List {
-                ForEach(Meals, id: \.self) { currentMeal in
-                    Text("\(currentMeal.foodType): \(currentMeal.calories) calories")
-                }
+                .cornerRadius(5)
+                .padding()
             }
         }
-        .padding() // Added padding for better spacing
+        .padding()
+        .onAppear {
+            loadMeals()
+            updateCurrentDate()
+        }
+        .onDisappear {
+            saveMeals()
+        }
+    }
+    
+    // Function to save Meals array to UserDefaults
+    func saveMeals() {
+        let encodedData = try? JSONEncoder().encode(meals)
+        UserDefaults.standard.set(encodedData, forKey: mealsKey)
+    }
+    
+    // Function to load Meals array from UserDefaults
+    func loadMeals() {
+        if let encodedData = UserDefaults.standard.data(forKey: mealsKey),
+           let savedMeals = try? JSONDecoder().decode([Meal].self, from: encodedData) {
+            meals = savedMeals
+        }
+    }
+    
+    // Function to update the current date
+    func updateCurrentDate() {
+        currentDate = Date()
+    }
+    
+    // Function to calculate total calories for today
+    func totalCaloriesForToday() -> Int {
+        let total = meals.filter { isMealForToday($0) }.reduce(0) { $0 + $1.calories }
+        return total
+    }
+    
+    // Function to check if a meal is for the current day
+    func isMealForToday(_ meal: Meal) -> Bool {
+        let calendar = Calendar.current
+        return calendar.isDate(meal.date, inSameDayAs: currentDate)
     }
 }
 
-struct Meal: Hashable {
+struct Meal: Codable, Hashable {
     var foodType: String
     var calories: Int
+    var date: Date
 }
-

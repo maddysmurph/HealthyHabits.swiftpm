@@ -98,7 +98,7 @@ struct HomeView: View {
         }
         HStack(spacing: 20){
             NavigationLink{
-                trackerView()
+                TrackerView()
             } label: {
                 Image(systemName: "pin")
                     .resizable()
