@@ -11,11 +11,11 @@ struct IncreaseEnergyView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Exercises recommended for")
-                .font(.system(size: 30))
+                .font(.system(size: 20))
                 .foregroundColor(.black)
                 .padding([.leading])
             Text("Increased Energy")
-                .font(.system(size: 50))
+                .font(.system(size: 40))
                 .foregroundColor(.CustomPinkDark)
                 .bold()
                 .padding([.leading])
@@ -24,14 +24,14 @@ struct IncreaseEnergyView: View {
         VStack{
             HStack {
                 Text("Biking")
-                    .frame(width: 200, height: 40)
+                    .frame(width: 150, height: 40)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.white)
                     .background(Color.CustomPinkLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10.0))
                 Text("Walking")
-                    .frame(width: 200, height: 40)
+                    .frame(width: 150, height: 40)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.white)
@@ -40,14 +40,14 @@ struct IncreaseEnergyView: View {
             }
             HStack {
                 Text("Mountain Climbers")
-                    .frame(width: 200, height: 40)
+                    .frame(width: 150, height: 40)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.white)
                     .background(Color.CustomPinkLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10.0))
                 Text("Dance")
-                    .frame(width: 200, height: 40)
+                    .frame(width: 150, height: 40)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.white)
@@ -57,7 +57,7 @@ struct IncreaseEnergyView: View {
             
             HStack {
                 Text("Upward Dog Stretch")
-                    .frame(width: 200, height: 40)
+                    .frame(width: 150, height: 40)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.white)

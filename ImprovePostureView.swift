@@ -11,11 +11,11 @@ struct ImprovePostureView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Exercises recommended for")
-                .font(.system(size: 30))
+                .font(.system(size: 20))
                 .foregroundColor(.black)
                 .padding([.leading])
             Text("Improving your Posture")
-                .font(.system(size: 50))
+                .font(.system(size: 40))
                 .foregroundColor(.CustomPinkDark)
                 .bold()
                 .padding([.leading])
@@ -23,14 +23,14 @@ struct ImprovePostureView: View {
             VStack{
                 HStack {
                     Text("Plank")
-                        .frame(width: 200, height: 40)
+                        .frame(width: 150, height: 40)
                         .font(.system(size: 20))
                         .bold()
                         .foregroundColor(.white)
                         .background(Color.CustomPinkLight)
                         .clipShape(RoundedRectangle(cornerRadius: 10.0))
                     Text("Cat Cow Stretches")
-                        .frame(width: 200, height: 40)
+                        .frame(width: 150, height: 40)
                         .font(.system(size: 20))
                         .bold()
                         .foregroundColor(.white)
@@ -39,14 +39,14 @@ struct ImprovePostureView: View {
                 }
                 HStack {
                     Text("Downward Dog Pose")
-                        .frame(width: 200, height: 40)
+                        .frame(width: 150, height: 40)
                         .font(.system(size: 20))
                         .bold()
                         .foregroundColor(.white)
                         .background(Color.CustomPinkLight)
                         .clipShape(RoundedRectangle(cornerRadius: 10.0))
                     Text("Bird Dog Exercise")
-                        .frame(width: 200, height: 40)
+                        .frame(width: 150, height: 40)
                         .font(.system(size: 20))
                         .bold()
                         .foregroundColor(.white)
@@ -56,7 +56,7 @@ struct ImprovePostureView: View {
                 
                 HStack {
                     Text("Bridge")
-                        .frame(width: 200, height: 40)
+                        .frame(width: 150, height: 40)
                         .font(.system(size: 20))
                         .bold()
                         .foregroundColor(.white)
