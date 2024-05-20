@@ -15,52 +15,44 @@ struct VegetarianView: View {
     let creamyURL = URL(string: "https://themodernproper.com/creamy-cavatappi")!
     
     var body: some View {
-        VStack{
-            HStack{
-                Button(action: {
-                    Link("Kung Pao Caudiflower", destination: KungPaoURL)
-                }, label: {
-                    Image("1")
-                        .resizable()
-                        .frame(width: 125, height: 125)
-                })
-                
-                Button(action: {
-                    Link("Fusilli Pasta with Spicy Red Tomatoe Sauce", destination: FusilliPastaURL)
-                }, label: {
-                    Image("2")
-                        .resizable()
-                        .frame(width: 125, height: 125)
-                })
-            }
-            HStack{
-                Button(action: {
-                    Link("Brocolli Cheddar Soup", destination: BrocolliURL)
-                }, label: {
-                    Image("3")
-                        .resizable()
-                        .frame(width: 125, height: 125)
-                })
-                Button(action: {
-                    Link("7 Layer Dip", destination: SevenLayerURL)
-                }, label: {
-                    Image("4")
-                        .resizable()
-                        .frame(width: 125, height: 125)
-                })
-                Button(action: {
-                    Link("Creamy Cavatappi", destination: creamyURL)
-                }, label: {
-                    Image("5")
-                        .resizable()
-                        .frame(width: 125, height: 125)
-                })
-            }
+        VStack {
+            Button(action: {
+                Link("Kung Pao Caudiflower", destination: KungPaoURL)
+            }, label: {
+                Image("1")
+                    .resizable()
+                    .frame(width: 250, height: 250)
+            })
+            
+            Button(action: {
+                Link("Fusilli Pasta with Spicy Red Tomatoe Sauce", destination: FusilliPastaURL)
+            }, label: {
+                Image("2")
+                    .resizable()
+                    .frame(width: 250, height: 250)
+            })
+            Button(action: {
+                Link("Brocolli Cheddar Soup", destination: BrocolliURL)
+            }, label: {
+                Image("3")
+                    .resizable()
+                    .frame(width: 250, height: 250)
+            })
+            Button(action: {
+                Link("7 Layer Dip", destination: SevenLayerURL)
+            }, label: {
+                Image("4")
+                    .resizable()
+                    .frame(width: 250, height: 250)
+            })
+            Button(action: {
+                Link("Creamy Cavatappi", destination: creamyURL)
+            }, label: {
+                Image("5")
+                    .resizable()
+                    .frame(width: 250, height: 250)
+            })
+        }
         }
     }
     
-}
-
-#Preview {
-    VegetarianView()
-}
