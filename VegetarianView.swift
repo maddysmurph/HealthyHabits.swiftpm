@@ -60,7 +60,3 @@ struct VegetarianView: View {
     }
     
 }
-
-#Preview {
-    VegetarianView()
-}

@@ -53,6 +53,4 @@ struct KetoView: View {
     }
 }
 
-#Preview {
-    KetoView()
-}
+

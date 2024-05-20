@@ -19,12 +19,10 @@ struct FoodView: View {
             NavigationLink("Keto"){
                 KetoView()
             }
-            NavigationLink("Calorie Control"){
-                CalorieControlView()
+            NavigationLink("Balanced"){
+                BalancedView()
             }
-            NavigationLink("Nutritious"){
-                NutritiousView()
-            }
+            
         }
     }
 }

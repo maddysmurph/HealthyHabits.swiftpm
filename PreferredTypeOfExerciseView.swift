@@ -62,7 +62,3 @@ struct PreferredTypeOfExercise: View {
         }
     }
 }
-
-#Preview {
-    PreferredTypeOfExercise()
-}
