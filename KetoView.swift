@@ -19,7 +19,7 @@ struct KetoView: View {
         }, label: {
             Image("11")
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 150, height: 150)
         })
         
         Button(action: {
@@ -27,28 +27,28 @@ struct KetoView: View {
         }, label: {
             Image("12")
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 150, height: 150)
         })
         Button(action: {
             Link("Gluten Free Keto Meatloaf", destination: glutenURL)
         }, label: {
             Image("13")
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 150, height: 150)
         })
         Button(action: {
             Link("Keto Bacon Cheeseburger Bowls", destination: baconURL)
         }, label: {
             Image("14")
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 150, height: 150)
         })
         Button(action: {
             Link("Keto Pizza Snack", destination: pizzaURL)
         }, label: {
             Image("15")
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 150, height: 150)
         })
     }
 }

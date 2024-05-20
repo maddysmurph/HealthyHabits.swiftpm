@@ -20,7 +20,7 @@ struct BalancedView: View {
             }, label: {
                 Image("16")
                     .resizable()
-                    .frame(width: 250, height: 250)
+                    .frame(width: 150, height: 150)
             })
             
             Button(action: {
@@ -28,7 +28,7 @@ struct BalancedView: View {
             }, label: {
                 Image("17")
                     .resizable()
-                    .frame(width: 250, height: 250)
+                    .frame(width: 150, height: 150)
             })
             
             Button(action: {
@@ -36,21 +36,21 @@ struct BalancedView: View {
             }, label: {
                 Image("18")
                     .resizable()
-                    .frame(width: 250, height: 250)
+                    .frame(width: 150, height: 150)
             })
             Button(action: {
                 Link("Healthy Gnocchi", destination: gnocchiURL)
             }, label: {
                 Image("19")
                     .resizable()
-                    .frame(width: 250, height: 250)
+                    .frame(width: 150, height: 150)
             })
             Button(action: {
                 Link("Crunchy Noodle Salad", destination: crunchyURL)
             }, label: {
                 Image("20")
                     .resizable()
-                    .frame(width: 250, height: 250)
+                    .frame(width: 150, height: 150)
             })
         }
     }

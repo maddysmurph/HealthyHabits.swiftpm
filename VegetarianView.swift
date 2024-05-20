@@ -21,7 +21,7 @@ struct VegetarianView: View {
             }, label: {
                 Image("1")
                     .resizable()
-                    .frame(width: 250, height: 250)
+                    .frame(width: 150, height: 150)
             })
             
             Button(action: {
@@ -29,31 +29,30 @@ struct VegetarianView: View {
             }, label: {
                 Image("2")
                     .resizable()
-                    .frame(width: 250, height: 250)
+                    .frame(width: 150, height: 150)
             })
             Button(action: {
                 Link("Brocolli Cheddar Soup", destination: BrocolliURL)
             }, label: {
                 Image("3")
                     .resizable()
-                    .frame(width: 250, height: 250)
+                    .frame(width: 150, height: 150)
             })
             Button(action: {
                 Link("7 Layer Dip", destination: SevenLayerURL)
             }, label: {
                 Image("4")
                     .resizable()
-                    .frame(width: 250, height: 250)
+                    .frame(width: 150, height: 150)
             })
             Button(action: {
                 Link("Creamy Cavatappi", destination: creamyURL)
             }, label: {
                 Image("5")
                     .resizable()
-                    .frame(width: 250, height: 250)
+                    .frame(width: 150, height: 150)
             })
         }
         }
     }
     
-}

@@ -19,7 +19,7 @@ struct VeganView: View {
         }, label: {
             Image("6")
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 150, height: 150)
         })
         
         Button(action: {
@@ -27,28 +27,28 @@ struct VeganView: View {
         }, label: {
             Image("7")
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 150, height: 150)
         })
         Button(action: {
             Link("Vegan Lo Mein", destination: VeganURL)
         }, label: {
             Image("8")
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 150, height: 150)
         })
         Button(action: {
             Link("Sweet Potatoe Black Bean Chili", destination: SweetURL)
         }, label: {
             Image("9")
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 150, height: 150)
         })
         Button(action: {
             Link("The Best Vegan Caesar Salad", destination: SaladURL)
         }, label: {
             Image("10")
                 .resizable()
-                .frame(width: 250, height: 250)
+                .frame(width: 150, height: 150)
         })
     }
 }
