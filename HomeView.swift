@@ -53,33 +53,26 @@ struct HomeView: View {
                     Text("Get")
                         .font(.system(size: 30))
                         .foregroundColor(.black)
-                        .offset(x: -120, y: -140)
+                        .offset(x: -130, y: -100)
                     Text("Food")
                         .font(.system(size: 50))
                         .foregroundColor(.CustomGreenDark)
-                        .offset(x: -90, y: -100)
+                        .offset(x: -90, y: -90)
                         .bold()
                     Text("Inspo")
                         .font(.system(size: 30))
                         .foregroundColor(.black)
-                        .offset(x: -60, y: -130)
-                    VStack {
-                        Image("foodinspothumbnail")
-                            .resizable()
-                            .clipShape(Circle())
-                            .frame(width: 100, height: 100)
-                            .offset(x: -90, y: -140)
-                    }
-                }
+                        .offset(x: -60, y: -80)
                 NavigationLink("Go") {
                     FoodView()
                 }
+                .offset(x: -60, y: -90)
                 ZStack {
                     RoundedRectangle(cornerRadius: 65)
                         .size(width: 350, height: 200)
                         .foregroundColor(.CustomPinkLight)
                         .padding([.leading])
-                        .offset(x: 5, y: -180)
+                        .offset(x: 5, y: -150)
                     Text("Exercises")
                         .font(.system(size: 35))
                         .foregroundColor(.CustomPinkDark)
