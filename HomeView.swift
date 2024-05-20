@@ -21,7 +21,7 @@ struct HomeView: View {
                     .padding([.leading])
             }
             Text("Health Plan made just for you.")
-                .font(.system(size: 10))
+                .font(.system(size: 15))
                 .foregroundColor(.black)
                 .padding([.leading])
             Divider()
@@ -53,72 +53,73 @@ struct HomeView: View {
                     Text("Get")
                         .font(.system(size: 30))
                         .foregroundColor(.black)
-                        .offset(x: -130, y: -100)
+                        .offset(x: -130, y: -200)
                     Text("Food")
                         .font(.system(size: 50))
                         .foregroundColor(.CustomGreenDark)
-                        .offset(x: -90, y: -90)
+                        .offset(x: -90, y: -100)
                         .bold()
                     Text("Inspo")
                         .font(.system(size: 30))
                         .foregroundColor(.black)
-                        .offset(x: -60, y: -80)
-                NavigationLink("Go") {
-                    FoodView()
-                }
-                .offset(x: -60, y: -90)
-                ZStack {
-                    RoundedRectangle(cornerRadius: 65)
-                        .size(width: 350, height: 200)
-                        .foregroundColor(.CustomPinkLight)
-                        .padding([.leading])
-                        .offset(x: 5, y: -150)
-                    Text("Exercises")
-                        .font(.system(size: 35))
-                        .foregroundColor(.CustomPinkDark)
-                        .offset(x: -60, y: -150)
-                        .bold()
-                    Text("Recommended for you")
-                        .font(.system(size: 25))
-                        .foregroundColor(.black)
-                        .offset(x: -65, y: -100)
+                        .offset(x: -60, y: -90)
                     NavigationLink("Go") {
-                        ExerciseView()
+                        FoodView()
+                    }
+                    .offset(x: -60, y: -90)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 65)
+                            .size(width: 350, height: 200)
+                            .foregroundColor(.CustomPinkLight)
+                            .padding([.leading])
+                            .offset(x: 5, y: -110)
+                        Text("Exercises")
+                            .font(.system(size: 35))
+                            .foregroundColor(.CustomPinkDark)
+                            .offset(x: -60, y: -150)
+                            .bold()
+                        Text("Recommended for you")
+                            .font(.system(size: 25))
+                            .foregroundColor(.black)
+                            .offset(x: -65, y: -100)
+                        NavigationLink("Go") {
+                            ExerciseView()
+                        }
                     }
                 }
+                
             }
-            
+            HStack(spacing: 20){
+                NavigationLink{
+                    TrackerView()
+                } label: {
+                    Image(systemName: "pin")
+                        .resizable()
+                        .frame(width: 40, height: 60)
+                        .foregroundColor(.white)
+                }
+                
+                NavigationLink{
+                    HomeView()
+                } label: {
+                    Image(systemName: "house.circle")
+                        .resizable()
+                        .frame(width: 85, height: 80)
+                        .foregroundColor(.white)
+                }
+                
+                NavigationLink{
+                    AboutView()
+                }label: {
+                    Image(systemName: "person")
+                        .resizable()
+                        .frame(width: 55, height: 60)
+                        .foregroundColor(.white)
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: 100)
+            .background(Color.CustomYellowLight)
         }
-        HStack(spacing: 20){
-            NavigationLink{
-                TrackerView()
-            } label: {
-                Image(systemName: "pin")
-                    .resizable()
-                    .frame(width: 40, height: 60)
-                    .foregroundColor(.white)
-            }
-            
-            NavigationLink{
-                HomeView()
-            } label: {
-                Image(systemName: "house.circle")
-                    .resizable()
-                    .frame(width: 85, height: 80)
-                    .foregroundColor(.white)
-            }
-            
-            NavigationLink{
-                AboutView()
-            }label: {
-                Image(systemName: "person")
-                    .resizable()
-                    .frame(width: 55, height: 60)
-                    .foregroundColor(.white)
-            }
-        }
-        .frame(maxWidth: .infinity, maxHeight: 100)
-        .background(Color.CustomYellowLight)
     }
 }
     extension Color {
@@ -139,5 +140,4 @@ struct HomeView: View {
     extension Color {
         static let CustomBlueDark = Color (red: 15/255, green: 82/255, blue: 180/255)
     }
-    
 
