@@ -42,11 +42,11 @@ struct HomeView: View {
                             .font(.system(size: 35))
                             .foregroundColor(.CustomBlueDark)
                             .bold()
-                            .offset(x: 20, y: 120)
+                            .offset(x: 0, y: 60)
                         Text("Reminder")
-                            .font(.system(size: 20))
+                            .font(.system(size: 21))
                             .foregroundColor(.black)
-                            .offset(x: 18, y: 150)
+                            .offset(x: 0, y: 90)
                     }
                 }
                 VStack {
@@ -57,34 +57,47 @@ struct HomeView: View {
                     Text("Food")
                         .font(.system(size: 50))
                         .foregroundColor(.CustomGreenDark)
-                        .offset(x: -90, y: -100)
+                        .offset(x: -90, y: -200)
                         .bold()
                     Text("Inspo")
                         .font(.system(size: 30))
                         .foregroundColor(.black)
-                        .offset(x: -60, y: -90)
+                        .offset(x: -60, y: -200)
                     NavigationLink("Go") {
                         FoodView()
                     }
-                    .offset(x: -60, y: -90)
+                    .frame(width: 80, height: 35)
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundColor(.white)
+                    .background(Color.CustomYellowDark)
+                    .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                    .offset(x: -90, y: -200)
                     ZStack {
                         RoundedRectangle(cornerRadius: 65)
                             .size(width: 350, height: 200)
                             .foregroundColor(.CustomPinkLight)
                             .padding([.leading])
-                            .offset(x: 5, y: -110)
+                            .offset(x: 5, y: -150)
                         Text("Exercises")
                             .font(.system(size: 35))
                             .foregroundColor(.CustomPinkDark)
-                            .offset(x: -60, y: -150)
+                            .offset(x: -60, y: -130)
                             .bold()
                         Text("Recommended for you")
                             .font(.system(size: 25))
                             .foregroundColor(.black)
-                            .offset(x: -65, y: -100)
+                            .offset(x: -15, y: -100)
                         NavigationLink("Go") {
                             ExerciseView()
                         }
+                        .frame(width: 80, height: 35)
+                        .font(.system(size: 20))
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(Color.CustomYellowDark)
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                        .offset(x: 5, y: -50)
                     }
                 }
                 
@@ -117,7 +130,7 @@ struct HomeView: View {
                         .foregroundColor(.white)
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: 100)
+            .frame(maxWidth: .infinity, maxHeight: 70)
             .background(Color.CustomYellowLight)
         }
     }
