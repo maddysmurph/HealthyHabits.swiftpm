@@ -21,7 +21,6 @@ struct ImprovePostureView: View {
                 .padding([.leading])
             Divider()
             VStack{
-                HStack {
                     Text("Plank")
                         .frame(width: 150, height: 40)
                         .font(.system(size: 20))
@@ -36,8 +35,6 @@ struct ImprovePostureView: View {
                         .foregroundColor(.white)
                         .background(Color.CustomPinkLight)
                         .clipShape(RoundedRectangle(cornerRadius: 10.0))
-                }
-                HStack {
                     Text("Downward Dog Pose")
                         .frame(width: 150, height: 40)
                         .font(.system(size: 20))
@@ -52,9 +49,6 @@ struct ImprovePostureView: View {
                         .foregroundColor(.white)
                         .background(Color.CustomPinkLight)
                         .clipShape(RoundedRectangle(cornerRadius: 10.0))
-                }
-                
-                HStack {
                     Text("Bridge")
                         .frame(width: 150, height: 40)
                         .font(.system(size: 20))
@@ -66,4 +60,3 @@ struct ImprovePostureView: View {
             }
         }
     }
-}
