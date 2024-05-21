@@ -6,7 +6,7 @@ struct TrackerView: View {
     @State var newCalorieAmount: Int = 0
     @State var currentDate: Date = Date()
     
-    // UserDefaults key
+   
     let mealsKey = "meals"
     
     var body: some View {
@@ -43,6 +43,13 @@ struct TrackerView: View {
                 .foregroundColor(.white)
                 .cornerRadius(5)
                 .padding()
+                
+                // List view to display meals
+                List {
+                    ForEach(meals, id: \.self) { meal in
+                        Text("\(meal.foodType): \(meal.calories) calories")
+                    }
+                }
             }
         }
         .padding()
@@ -55,13 +62,13 @@ struct TrackerView: View {
         }
     }
     
-    // Function to save Meals array to UserDefaults
+   
     func saveMeals() {
         let encodedData = try? JSONEncoder().encode(meals)
         UserDefaults.standard.set(encodedData, forKey: mealsKey)
     }
     
-    // Function to load Meals array from UserDefaults
+    
     func loadMeals() {
         if let encodedData = UserDefaults.standard.data(forKey: mealsKey),
            let savedMeals = try? JSONDecoder().decode([Meal].self, from: encodedData) {
@@ -69,18 +76,18 @@ struct TrackerView: View {
         }
     }
     
-    // Function to update the current date
+    
     func updateCurrentDate() {
         currentDate = Date()
     }
     
-    // Function to calculate total calories for today
+   
     func totalCaloriesForToday() -> Int {
         let total = meals.filter { isMealForToday($0) }.reduce(0) { $0 + $1.calories }
         return total
     }
     
-    // Function to check if a meal is for the current day
+    
     func isMealForToday(_ meal: Meal) -> Bool {
         let calendar = Calendar.current
         return calendar.isDate(meal.date, inSameDayAs: currentDate)
