@@ -76,6 +76,23 @@ struct AboutView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: 130)
         .background(Color.CustomYellowLight)
+        
+        Button("Log Out"){
+           name = ""
+            age = 0
+            sex = ""
+            weight = 0
+            height = 0
+            healthCondition = false
+            specificHealthCondition = ""
+            Medication = false
+            Medicationtime = ""
+            physicalactivity = false
+            preferredexercisetype = false
+        }
+        NavigationLink("Return to Start Page"){
+            ContentView()
+        }
     }
 }
 
