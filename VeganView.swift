@@ -22,6 +22,8 @@ struct VeganView: View {
                 .frame(width: 150, height: 150)
         })
         
+        Link("Macaroni Salad", destination: URL(string: "https://www.noracooks.com/vegan-macaroni-salad/")!)
+        
         Button(action: {
             Link("White Bean Soup", destination: WhiteBeanURL)
         }, label: {
@@ -29,6 +31,8 @@ struct VeganView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
         })
+        Link("White Bean Soup", destination: URL(string: "https://www.noracooks.com/white-bean-soup/")!)
+        
         Button(action: {
             Link("Vegan Lo Mein", destination: VeganURL)
         }, label: {
@@ -36,6 +40,9 @@ struct VeganView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
         })
+        
+        Link("Vegan Lo Mein", destination: URL(string: "https://www.noracooks.com/vegan-lo-mein/")!)
+        
         Button(action: {
             Link("Sweet Potatoe Black Bean Chili", destination: SweetURL)
         }, label: {
@@ -43,6 +50,9 @@ struct VeganView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
         })
+        
+        Link("Sweet Potatoe Black Bean Chili", destination: URL(string: "https://www.noracooks.com/vegan-sweet-potato-black-bean-chili/")!)
+        
         Button(action: {
             Link("The Best Vegan Caesar Salad", destination: SaladURL)
         }, label: {
@@ -50,6 +60,8 @@ struct VeganView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
         })
+        
+        Link("The Best Vegan Caesar Salad", destination: URL(string: "https://www.noracooks.com/vegan-caesar-salad/")!)
     }
 }
 
