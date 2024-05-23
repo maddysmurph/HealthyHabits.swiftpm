@@ -21,7 +21,6 @@ struct KetoView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
         })
-        
         Button(action: {
             Link("Keto Sheet Pan Chicken and Loaded Cauliflower", destination: sheetURL)
         }, label: {
