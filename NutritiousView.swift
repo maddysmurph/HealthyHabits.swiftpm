@@ -21,6 +21,9 @@ struct NutritiousView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
         })
+        
+        Link("Sheet Pan Black Pepper Tofu and Broccoli", destination: URL(string: "https://www.allrecipes.com/sheet-pan-black-pepper-tofu-and-broccoli-recipe-8649317")!)
+        
         Button(action: {
             Link("The Best Grilled Chicken Breasts", destination: chickenURL)
         }, label: {
@@ -28,6 +31,8 @@ struct NutritiousView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
         })
+        Link("The Best Grilled Chicken Breasts", destination: URL(string: "https://www.allrecipes.com/best-grilled-chicken-breasts-recipe-8648903")!)
+        
         Button(action: {
             Link("Mediterranean Pearl Couscous", destination: PearlURL)
         }, label: {
@@ -35,6 +40,9 @@ struct NutritiousView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
         })
+        
+        Link("Mediterranean Pearl Couscous", destination: URL(string: "https://www.allrecipes.com/mediterranean-pearl-couscous-recipe-8646349")!)
+        
         Button(action: {
             Link("Copycat Onion Wrapped Flying Dutchman", destination: onionURL)
         }, label: {
@@ -42,6 +50,9 @@ struct NutritiousView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
         })
+        
+        Link("Copycat Onion Wrapped Flying Dutchman", destination: URL(string: "https://www.allrecipes.com/copycat-onion-wrapped-flying-dutchman-recipe-8553215")!)
+        
         Button(action: {
             Link("Mediterranean Baked Cod", destination: codURL)
         }, label: {
@@ -49,6 +60,8 @@ struct NutritiousView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
         })
+        
+        Link("Mediterranean Baked Cod", destination: URL(string: "https://www.allrecipes.com/mediterranean-baked-cod-recipe-8576276")!)
 
         
     }
