@@ -23,7 +23,7 @@ struct FoodView: View {
             NavigationLink("Vegetarian"){
                 VegetarianView()
             }
-            .frame(width: 300, height: 40)
+            .frame(width: 230, height: 40)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .bold()
@@ -32,7 +32,7 @@ struct FoodView: View {
             NavigationLink("Vegan"){
                 VeganView()
             }
-            .frame(width: 300, height: 40)
+            .frame(width: 230, height: 40)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .bold()
@@ -41,7 +41,7 @@ struct FoodView: View {
             NavigationLink("Keto"){
                 KetoView()
             }
-            .frame(width: 300, height: 40)
+            .frame(width: 230, height: 40)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .bold()
@@ -50,7 +50,7 @@ struct FoodView: View {
             NavigationLink("Balanced"){
                 BalancedView()
             }
-            .frame(width: 300, height: 40)
+            .frame(width: 230, height: 40)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .bold()
