@@ -22,6 +22,7 @@ struct BalancedView: View {
                     .resizable()
                     .frame(width: 150, height: 150)
             })
+            .animation(.easeIn, value: 180)
             Link("Healthy Saumon Pasta", destination: URL(string: "https://www.bbcgoodfood.com/recipes/summer-salmon-pasta")!)
             Button(action: {
                 Link("Healthy Pesto Eggs on Toast", destination: pestoURL)
@@ -30,6 +31,7 @@ struct BalancedView: View {
                     .resizable()
                     .frame(width: 150, height: 150)
             })
+            .animation(.easeIn, value: 180)
             Link("Healthy Pesto Eggs on Toast", destination: URL(string: "https://www.bbcgoodfood.com/recipes/healthy-pesto-eggs-on-toast")!)
             Button(action: {
                 Link("Speedy Lentil Coconut Curry", destination: speedyURL)
@@ -38,6 +40,7 @@ struct BalancedView: View {
                     .resizable()
                     .frame(width: 150, height: 150)
             })
+            .animation(.easeIn, value: 180)
             Link("Speedy Lentil Coconut Curry", destination: URL(string: "https://www.bbcgoodfood.com/recipes/speedy-lentil-coconut-curry")!)
             Button(action: {
                 Link("Healthy Gnocchi", destination: gnocchiURL)
@@ -46,6 +49,7 @@ struct BalancedView: View {
                     .resizable()
                     .frame(width: 150, height: 150)
             })
+            .animation(.easeIn, value: 180)
             Link("Healthy Gnocchi", destination: URL(string: "https://www.bbcgoodfood.com/recipes/healthy-gnocchi")!)
             Button(action: {
                 Link("Crunchy Noodle Salad", destination: crunchyURL)
@@ -54,6 +58,7 @@ struct BalancedView: View {
                     .resizable()
                     .frame(width: 150, height: 150)
             })
+            .animation(.easeIn, value: 180)
             Link("Crunchy Noodle Salad", destination: URL(string: "https://www.bbcgoodfood.com/recipes/crunchy-noodle-salad")!)
         }
     }

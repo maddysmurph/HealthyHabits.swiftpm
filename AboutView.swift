@@ -90,6 +90,7 @@ struct AboutView: View {
             physicalactivity = false
             preferredexercisetype = false
         }
+        
         NavigationLink("Return to Start Page"){
             ContentView()
         }

@@ -14,6 +14,7 @@ struct PhysicalActivityView: View {
     @State var backgroundColor2 = Color.CustomYellowLight
     @State var backgroundColor3 = Color.CustomYellowLight
     @State var backgroundColor4 = Color.CustomYellowLight
+    @State var currentDegree = 0.0
     var body: some View {
         VStack {
             Text("Personalize")
@@ -38,48 +39,65 @@ struct PhysicalActivityView: View {
                 backgroundColor2 = Color.CustomYellowLight
                 backgroundColor3 = Color.CustomYellowLight
                 backgroundColor4 = Color.CustomYellowLight
+                withAnimation(Animation.easeIn){
+                    currentDegree += 360.0
+                }
             }
             .frame(width: 300, height: 40)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .background(backgroundColor1)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            .rotationEffect(.degrees(currentDegree))
             Button("1-2 times a week"){
                 physicalactivity = false
                 backgroundColor2 = Color.CustomYellowDark
                 backgroundColor1 = Color.CustomYellowLight
                 backgroundColor3 = Color.CustomYellowLight
                 backgroundColor4 = Color.CustomYellowLight
+                withAnimation(Animation.easeIn){
+                    currentDegree += 360.0
+                }
             }
             .frame(width: 300, height: 40)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .background(backgroundColor2)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            .rotationEffect(.degrees(currentDegree))
             Button("3-4 times a week"){
                 physicalactivity = false
                 backgroundColor3 = Color.CustomYellowDark
                 backgroundColor2 = Color.CustomYellowLight
                 backgroundColor1 = Color.CustomYellowLight
                 backgroundColor4 = Color.CustomYellowLight
+                withAnimation(Animation.easeIn){
+                    currentDegree += 360.0
+                }
             }
             .frame(width: 300, height: 40)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .background(backgroundColor3)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            .rotationEffect(.degrees(currentDegree))
             Button("5+ times a week"){
                 physicalactivity = false
                 backgroundColor4 = Color.CustomYellowDark
                 backgroundColor2 = Color.CustomYellowLight
                 backgroundColor3 = Color.CustomYellowLight
                 backgroundColor1 = Color.CustomYellowLight
+                withAnimation(Animation.easeIn){
+                    currentDegree += 360.0
+                }
             }
+            
             .frame(width: 300, height: 40)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .background(backgroundColor4)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            .rotationEffect(.degrees(currentDegree))
             VStack(alignment: .center, spacing: 25) {
                 NavigationLink("Continue"){
                     PreferredTypeOfExercise()
