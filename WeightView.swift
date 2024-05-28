@@ -15,6 +15,7 @@ struct WeightView: View {
     @State var backgroundColor3 = Color.CustomYellowLight
     @State var backgroundColor4 = Color.CustomYellowLight
     @State var backgroundColor5 = Color.CustomYellowLight
+    @State var currentDegree = 0.0
     var body: some View {
         Text("Personalize")
             .font(.system(size: 45))
@@ -38,12 +39,16 @@ struct WeightView: View {
                 backgroundColor3 = Color.CustomYellowLight
                 backgroundColor4 = Color.CustomYellowLight
                 backgroundColor5 = Color.CustomYellowLight
+                withAnimation(Animation.easeIn){
+                                    currentDegree += 360.0
+                                }
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .background(backgroundColor1)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            .rotationEffect(.degrees(currentDegree))
             Button("5-10 lbs") {
                 weight = false
                 backgroundColor2 = Color.CustomYellowDark
@@ -51,12 +56,16 @@ struct WeightView: View {
                 backgroundColor3 = Color.CustomYellowLight
                 backgroundColor4 = Color.CustomYellowLight
                 backgroundColor5 = Color.CustomYellowLight
+                withAnimation(Animation.easeIn){
+                                    currentDegree += 360.0
+                                }
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .background(backgroundColor2)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            .rotationEffect(.degrees(currentDegree))
             Button("11-16 lbs") {
                 weight = false
                 backgroundColor3 = Color.CustomYellowDark
@@ -64,12 +73,16 @@ struct WeightView: View {
                 backgroundColor1 = Color.CustomYellowLight
                 backgroundColor4 = Color.CustomYellowLight
                 backgroundColor5 = Color.CustomYellowLight
+                withAnimation(Animation.easeIn){
+                                    currentDegree += 360.0
+                                }
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .background(backgroundColor3)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            .rotationEffect(.degrees(currentDegree))
             Button("17-22 lbs") {
                 weight = false
                 backgroundColor4 = Color.CustomYellowDark
@@ -77,12 +90,16 @@ struct WeightView: View {
                 backgroundColor3 = Color.CustomYellowLight
                 backgroundColor1 = Color.CustomYellowLight
                 backgroundColor5 = Color.CustomYellowLight
+                withAnimation(Animation.easeIn){
+                                    currentDegree += 360.0
+                                }
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .background(backgroundColor4)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            .rotationEffect(.degrees(currentDegree))
             Button("23+ lbs") {
                 weight = false
                 backgroundColor5 = Color.CustomYellowDark
@@ -90,12 +107,16 @@ struct WeightView: View {
                 backgroundColor3 = Color.CustomYellowLight
                 backgroundColor4 = Color.CustomYellowLight
                 backgroundColor1 = Color.CustomYellowLight
+                withAnimation(Animation.easeIn){
+                                    currentDegree += 360.0
+                                }
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
             .foregroundColor(.white)
             .background(backgroundColor5)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            .rotationEffect(.degrees(currentDegree))
             NavigationLink("Continue"){
                 generatingView()
 

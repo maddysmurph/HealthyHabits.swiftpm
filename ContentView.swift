@@ -1,31 +1,7 @@
 import SwiftUI
 import UserNotifications
 struct ContentView: View {
-    @State private var permissionGranted = false
-
-    private func requestPermissions() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-            if success {
-                permissionGranted = true
-            } else if let error = error {
-                print(error.localizedDescription)
-            }
-        }
-    }
-
-    private func sendNotification() {
-        let notificationContent = UNMutableNotificationContent()
-        notificationContent.title = "Hello world!"
-        notificationContent.subtitle = "Here's how you send a notification in SwiftUI"
-
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        // you could also use...
-        // UNCalendarNotificationTrigger(dateMatching: .init(year: 2022, month: 12, day: 10, hour: 0, minute: 0), repeats: true)
-
-        let req = UNNotificationRequest(identifier: UUID().uuidString, content: notificationContent, trigger: trigger)
-
-        UNUserNotificationCenter.current().add(req)
-    }
+    
 
     var body: some View {
         NavigationStack {
@@ -87,6 +63,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .background(Color.CustomYellowDark)
                             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                            .animation(.easeIn, value: 180)
                             
                             Text("Already Entered Your Information?")
                                 .font(.system(size: 20))
@@ -105,6 +82,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .background(Color.CustomYellowDark)
                             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                            .animation(.easeIn, value: 180)
                             
                         }
                     }
