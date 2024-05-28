@@ -53,6 +53,3 @@ struct LowCalorieView: View {
     }
 }
 
-#Preview {
-    LowCalorieView()
-}

@@ -67,6 +67,4 @@ struct NutritiousView: View {
     }
 }
 
-#Preview {
-    NutritiousView()
-}
+

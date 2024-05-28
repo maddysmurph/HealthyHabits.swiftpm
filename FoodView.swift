@@ -56,6 +56,24 @@ struct FoodView: View {
             .bold()
             .background(Color.CustomGreenLight)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            NavigationLink("Nutritious"){
+                NutritiousView()
+            }
+            .frame(width: 230, height: 40)
+            .font(.system(size: 20))
+            .foregroundColor(.white)
+            .bold()
+            .background(Color.CustomGreenLight)
+            .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            NavigationLink("Low Calorie"){
+                LowCalorieView()
+            }
+            .frame(width: 230, height: 40)
+            .font(.system(size: 20))
+            .foregroundColor(.white)
+            .bold()
+            .background(Color.CustomGreenLight)
+            .clipShape(RoundedRectangle(cornerRadius: 10.0))
         }
     }
 }
