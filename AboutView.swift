@@ -99,6 +99,14 @@ struct AboutView: View {
                     .frame(width: 55, height: 60)
                     .foregroundColor(.white)
             }
+            NavigationLink{
+                ExerciseTrackerView()
+            } label: {
+                Image(systemName: "figure.run")
+                    .resizable()
+                    .frame(width: 45, height: 63)
+                    .foregroundColor(.white)
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: 70)
         .background(Color.CustomYellowLight)
