@@ -37,7 +37,7 @@ struct MedicationView: View {
         .foregroundColor(.white)
         .background(Color.CustomYellowLight)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
-       
+        
         
         Button("No"){
             Text("When do you take the medication?")
@@ -48,10 +48,10 @@ struct MedicationView: View {
         .foregroundColor(.white)
         .background(Color.CustomYellowLight)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
-
+        
         NavigationLink("Continue"){
             PhysicalActivityView()
-
+            
         }
         .frame(width: 200, height: 40)
         .font(.system(size: 20))
@@ -59,7 +59,7 @@ struct MedicationView: View {
         .foregroundColor(.white)
         .background(Color.CustomYellowDark)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
-
+        
     }
 }
 

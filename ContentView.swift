@@ -2,7 +2,7 @@ import SwiftUI
 import UserNotifications
 struct ContentView: View {
     
-
+    
     var body: some View {
         NavigationStack {
             VStack{
@@ -67,11 +67,11 @@ struct ContentView: View {
                             
                             Text("Already Entered Your Information?")
                                 .font(.system(size: 20))
-                                
+                            
                                 .foregroundColor(.black)
                             Text("Click Below:")
                                 .font(.system(size: 20))
-                               
+                            
                                 .foregroundColor(.black)
                             NavigationLink("Home") {
                                 HomeView()

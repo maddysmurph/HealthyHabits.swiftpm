@@ -49,7 +49,7 @@ struct LowCalorieView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
         })
-
+        
     }
 }
 

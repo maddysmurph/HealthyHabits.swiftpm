@@ -29,7 +29,7 @@ struct PreferredTypeOfExercise: View {
             Text("Select preferred type of exercise.")
                 .font(.system(size: 20))
                 .foregroundColor(.black)
-
+            
             Button("Aerobic") {
                 preferredexercisetype = false
                 backgroundColor1 = Color.CustomYellowDark
@@ -60,7 +60,7 @@ struct PreferredTypeOfExercise: View {
             .rotationEffect(.degrees(currentDegree))
             NavigationLink("Continue"){
                 preferredSleepTime()
-
+                
             }
             .frame(width: 200, height: 40)
             .font(.system(size: 20))

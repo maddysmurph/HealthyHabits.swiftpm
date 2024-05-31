@@ -40,8 +40,8 @@ struct WeightView: View {
                 backgroundColor4 = Color.CustomYellowLight
                 backgroundColor5 = Color.CustomYellowLight
                 withAnimation(Animation.easeIn){
-                                    currentDegree += 360.0
-                                }
+                    currentDegree += 360.0
+                }
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
@@ -57,8 +57,8 @@ struct WeightView: View {
                 backgroundColor4 = Color.CustomYellowLight
                 backgroundColor5 = Color.CustomYellowLight
                 withAnimation(Animation.easeIn){
-                                    currentDegree += 360.0
-                                }
+                    currentDegree += 360.0
+                }
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
@@ -74,8 +74,8 @@ struct WeightView: View {
                 backgroundColor4 = Color.CustomYellowLight
                 backgroundColor5 = Color.CustomYellowLight
                 withAnimation(Animation.easeIn){
-                                    currentDegree += 360.0
-                                }
+                    currentDegree += 360.0
+                }
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
@@ -91,8 +91,8 @@ struct WeightView: View {
                 backgroundColor1 = Color.CustomYellowLight
                 backgroundColor5 = Color.CustomYellowLight
                 withAnimation(Animation.easeIn){
-                                    currentDegree += 360.0
-                                }
+                    currentDegree += 360.0
+                }
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
@@ -108,8 +108,8 @@ struct WeightView: View {
                 backgroundColor4 = Color.CustomYellowLight
                 backgroundColor1 = Color.CustomYellowLight
                 withAnimation(Animation.easeIn){
-                                    currentDegree += 360.0
-                                }
+                    currentDegree += 360.0
+                }
             }
             .frame(width: 150, height: 35)
             .font(.system(size: 20))
@@ -119,7 +119,7 @@ struct WeightView: View {
             .rotationEffect(.degrees(currentDegree))
             NavigationLink("Continue"){
                 generatingView()
-
+                
             }
             .frame(width: 200, height: 40)
             .font(.system(size: 20))

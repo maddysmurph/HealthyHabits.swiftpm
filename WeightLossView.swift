@@ -54,7 +54,7 @@ struct WeightLossView: View {
                     .background(Color.CustomPinkLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10.0))
             }
-                
+            
             HStack {
                 Text("Jumping Jacks")
                     .frame(width: 150, height: 40)

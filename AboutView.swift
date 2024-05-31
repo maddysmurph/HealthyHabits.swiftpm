@@ -20,7 +20,7 @@ struct AboutView: View {
     @AppStorage("MedicationTime") var Medicationtime: String = ""
     @AppStorage ("PhysicalActivity") var physicalactivity: Bool = false
     @AppStorage ("PreferredExerciseType") var preferredexercisetype: Bool = false
-
+    
     var body: some View {
         Text("Healthy Habits")
             .font(.system(size: 45))
@@ -47,7 +47,7 @@ struct AboutView: View {
         }
         .font(.system(size: 20))
         Button("Log Out"){
-           name = ""
+            name = ""
             age = 0
             sex = ""
             weight = 0
@@ -66,7 +66,7 @@ struct AboutView: View {
         Spacer()
         HStack(spacing: 20){
             NavigationLink{
-               favoritesView()
+                favoritesView()
             } label: {
                 Image(systemName: "heart")
                     .resizable()
@@ -111,7 +111,7 @@ struct AboutView: View {
         .frame(maxWidth: .infinity, maxHeight: 70)
         .background(Color.CustomYellowLight)
         
-       
+        
     }
 }
 

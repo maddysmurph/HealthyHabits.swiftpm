@@ -104,7 +104,7 @@ struct HomeView: View {
             }
             HStack(spacing: 20){
                 NavigationLink{
-                   favoritesView()
+                    favoritesView()
                 } label: {
                     Image(systemName: "heart")
                         .resizable()
@@ -151,22 +151,22 @@ struct HomeView: View {
         }
     }
 }
-    extension Color {
-        static let CustomGreenLight = Color (red: 201/255, green: 238/255, blue: 145/255)
-    }
-    extension Color {
-        static let CustomGreenDark = Color (red: 34/255, green: 139/255, blue: 34/255)
-    }
-    extension Color {
-        static let CustomPinkLight = Color (red: 255/255, green: 224/255, blue: 233/255)
-    }
-    extension Color {
-        static let CustomPinkDark = Color (red: 170, green: 51/255, blue: 106/255)
-    }
-    extension Color {
-        static let CustomBlueLight = Color (red: 170/255, green: 216/255, blue: 230/255)
-    }
-    extension Color {
-        static let CustomBlueDark = Color (red: 15/255, green: 82/255, blue: 180/255)
-    }
+extension Color {
+    static let CustomGreenLight = Color (red: 201/255, green: 238/255, blue: 145/255)
+}
+extension Color {
+    static let CustomGreenDark = Color (red: 34/255, green: 139/255, blue: 34/255)
+}
+extension Color {
+    static let CustomPinkLight = Color (red: 255/255, green: 224/255, blue: 233/255)
+}
+extension Color {
+    static let CustomPinkDark = Color (red: 170, green: 51/255, blue: 106/255)
+}
+extension Color {
+    static let CustomBlueLight = Color (red: 170/255, green: 216/255, blue: 230/255)
+}
+extension Color {
+    static let CustomBlueDark = Color (red: 15/255, green: 82/255, blue: 180/255)
+}
 

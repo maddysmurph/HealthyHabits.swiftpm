@@ -62,7 +62,7 @@ struct NutritiousView: View {
         })
         
         Link("Mediterranean Baked Cod", destination: URL(string: "https://www.allrecipes.com/mediterranean-baked-cod-recipe-8576276")!)
-
+        
         
     }
 }
