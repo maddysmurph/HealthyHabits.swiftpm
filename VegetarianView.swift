@@ -132,7 +132,7 @@ struct VegetarianView: View {
             }
         }
     }
-}
+
 extension Color {
     static let CustomLightPink = Color (red: 255/255, green: 192/255, blue: 203/255)
 }
