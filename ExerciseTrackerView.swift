@@ -11,9 +11,9 @@ struct ExerciseTrackerView: View {
     @State var exercises: [ExerciseTracking] = []
     
     var body: some View {
-        ListView(exercises: $exercises)
+        HeaderView(exercises: $exercises)
         List(exercises, id: \.self){ currentExercise in
-            ListView(currentExercise: currentExercise)
+            ListView(currentexercise: currentExercise)
         }
     }
 }
