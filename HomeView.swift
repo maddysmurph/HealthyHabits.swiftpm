@@ -21,7 +21,7 @@ struct HomeView: View {
                     .padding([.leading])
             }
             Text("Health Plan made just for you.")
-                .font(.system(size: 15))
+                .font(.system(size: 20))
                 .foregroundColor(.black)
                 .padding([.leading])
             Divider()
