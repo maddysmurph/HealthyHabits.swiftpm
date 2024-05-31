@@ -46,37 +46,6 @@ struct AboutView: View {
             Text("Preferred Exercise: \(preferredexercisetype)")
         }
         .font(.system(size: 20))
-        HStack(spacing: 20){
-            NavigationLink{
-                TrackerView()
-            } label: {
-                Image(systemName: "pin")
-                    .resizable()
-                    .frame(width: 40, height: 60)
-                    .foregroundColor(.white)
-            }
-            
-            NavigationLink{
-                HomeView()
-            } label: {
-                Image(systemName: "house.circle")
-                    .resizable()
-                    .frame(width: 85, height: 80)
-                    .foregroundColor(.white)
-            }
-            
-            NavigationLink{
-                AboutView()
-            }label: {
-                Image(systemName: "person")
-                    .resizable()
-                    .frame(width: 55, height: 60)
-                    .foregroundColor(.white)
-            }
-        }
-        .frame(maxWidth: .infinity, maxHeight: 130)
-        .background(Color.CustomYellowLight)
-        
         Button("Log Out"){
            name = ""
             age = 0
@@ -94,6 +63,47 @@ struct AboutView: View {
         NavigationLink("Return to Start Page"){
             ContentView()
         }
+        Spacer()
+        HStack(spacing: 20){
+            NavigationLink{
+               favoritesView()
+            } label: {
+                Image(systemName: "heart")
+                    .resizable()
+                    .frame(width: 60, height: 50)
+                    .foregroundColor(.white)
+            }
+            NavigationLink{
+                TrackerView()
+            } label: {
+                Image(systemName: "pin")
+                    .resizable()
+                    .frame(width: 40, height: 60)
+                    .foregroundColor(.white)
+            }
+            
+            NavigationLink{
+                HomeView()
+            } label: {
+                Image(systemName: "house.circle")
+                    .resizable()
+                    .frame(width: 70, height: 65)
+                    .foregroundColor(.white)
+            }
+            
+            NavigationLink{
+                AboutView()
+            }label: {
+                Image(systemName: "person")
+                    .resizable()
+                    .frame(width: 55, height: 60)
+                    .foregroundColor(.white)
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: 70)
+        .background(Color.CustomYellowLight)
+        
+       
     }
 }
 
