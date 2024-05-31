@@ -10,7 +10,7 @@ import SwiftUI
 struct favoritesView: View {
     var body: some View {
         Text("Your Favorites")
-        
+        Text("In Progress / Under Construction")
         Spacer()
         HStack(spacing: 20){
             NavigationLink{
