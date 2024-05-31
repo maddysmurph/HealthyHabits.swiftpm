@@ -50,6 +50,7 @@ struct TrackerView: View {
                         Text("\(meal.foodType): \(meal.calories) calories")
                     }
                 }
+                
             }
         }
         .padding()
