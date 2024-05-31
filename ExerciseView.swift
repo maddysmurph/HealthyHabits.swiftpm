@@ -65,6 +65,15 @@ struct ExerciseView: View {
             .foregroundColor(.white)
             .background(Color.CustomPinkLight)
             .clipShape(RoundedRectangle(cornerRadius: 10.0))
+            NavigationLink("Increase Stamina"){
+                IncreaseStaminaView()
+            }
+            .frame(width: 300, height: 40)
+            .font(.system(size: 20))
+            .bold()
+            .foregroundColor(.white)
+            .background(Color.CustomPinkLight)
+            .clipShape(RoundedRectangle(cornerRadius: 10.0))
         }
     }
 }

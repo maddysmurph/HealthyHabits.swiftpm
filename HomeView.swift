@@ -104,6 +104,14 @@ struct HomeView: View {
             }
             HStack(spacing: 20){
                 NavigationLink{
+                   favoritesView()
+                } label: {
+                    Image(systemName: "heart")
+                        .resizable()
+                        .frame(width: 60, height: 50)
+                        .foregroundColor(.white)
+                }
+                NavigationLink{
                     TrackerView()
                 } label: {
                     Image(systemName: "pin")
@@ -117,7 +125,7 @@ struct HomeView: View {
                 } label: {
                     Image(systemName: "house.circle")
                         .resizable()
-                        .frame(width: 85, height: 80)
+                        .frame(width: 70, height: 65)
                         .foregroundColor(.white)
                 }
                 
@@ -127,6 +135,14 @@ struct HomeView: View {
                     Image(systemName: "person")
                         .resizable()
                         .frame(width: 55, height: 60)
+                        .foregroundColor(.white)
+                }
+                NavigationLink{
+                    ExerciseTrackerView()
+                } label: {
+                    Image(systemName: "figure.run")
+                        .resizable()
+                        .frame(width: 45, height: 63)
                         .foregroundColor(.white)
                 }
             }

@@ -1,26 +1,16 @@
 //
-//  ExerciseTrackerView.swift
+//  FavoritesView.swift
 //  HealthyHabits
 //
-//  Created by Neha Darji on 5/28/24.
+//  Created by Maddy Murphy on 5/31/24.
 //
 
 import SwiftUI
 
-struct ExerciseTrackerView: View {
-    @State var exercises: [ExerciseTracking] = []
-    
+struct favoritesView: View {
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Track Your Exercise")
-                .font(.system(size: 50))
-                .foregroundColor(.black)
-                .bold()
-        }
-        HeaderView(exercises: $exercises)
-        List(exercises, id: \.self){ currentExercise in
-            ListView(currentexercise: currentExercise)
-        }
+        Text("Your Favorites")
+        
         Spacer()
         HStack(spacing: 20){
             NavigationLink{
