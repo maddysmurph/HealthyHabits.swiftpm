@@ -27,7 +27,7 @@
 //                }
 //                .foregroundColor(.white)
 //                .padding()
-//            }
+//                }
 //            VStack(alignment: .leading) {
 //                Label("hourly forecast".uppercased(), systemImage: "clock")
 //                    .font(.caption)
