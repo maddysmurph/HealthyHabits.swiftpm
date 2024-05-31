@@ -50,7 +50,7 @@ struct BalancedView: View {
                     .frame(width: 150, height: 150)
             })
             .animation(.easeIn, value: 180)
-            Link("Healthy Gnocchi", destination: URL(string: "https://www.bbcgoodfood.com/recipes/healthy-gnocchi")!)
+            Link("Healthy Gnocchi", destination: URL(string: "https://www.bbcgoodfood.com/recipes/heåalthy-gnocchi")!)
             Button(action: {
                 Link("Crunchy Noodle Salad", destination: crunchyURL)
             }, label: {

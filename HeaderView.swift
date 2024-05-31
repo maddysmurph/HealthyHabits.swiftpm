@@ -22,8 +22,8 @@ struct HeaderView: View {
                 let newExerciseTracking = ExerciseTracking(name: newExercise, calorieBurned: number)
                 exercises.append(newExerciseTracking)
                 
-            newExercise = ""
-            newCalorieBurned = nil
+                newExercise = ""
+                newCalorieBurned = nil
             }
             .bold()
             .font(.largeTitle)

@@ -54,7 +54,7 @@ struct WeightGainView: View {
                     .background(Color.CustomPinkLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10.0))
             }
-                
+            
             HStack {
                 Text("Lunges")
                     .frame(width: 150, height: 40)
@@ -63,7 +63,7 @@ struct WeightGainView: View {
                     .foregroundColor(.white)
                     .background(Color.CustomPinkLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10.0))
-    }
+            }
         }
     }
 }

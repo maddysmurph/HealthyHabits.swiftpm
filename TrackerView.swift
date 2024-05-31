@@ -5,9 +5,9 @@ struct TrackerView: View {
     @State var newFoodItem: String = ""
     @State var newCalorieAmount: Int = 0
     @State var currentDate: Date = Date()
-
+    
     let mealsKey = "meals"
-
+    
     var body: some View {
         VStack {
             VStack(alignment: .leading){
@@ -32,7 +32,7 @@ struct TrackerView: View {
                     let newItem = Meal(foodType: newFoodItem, calories: newCalorieAmount, date: currentDate)
                     meals.append(newItem)
                     saveMeals()
-
+                    
                     newFoodItem = ""
                     newCalorieAmount = 0
                 }
@@ -42,7 +42,7 @@ struct TrackerView: View {
                 .foregroundColor(.white)
                 .cornerRadius(5)
                 .padding()
-
+                
                 
                 List {
                     ForEach(meals.indices, id: \.self) { index in
@@ -74,7 +74,7 @@ struct TrackerView: View {
         Spacer()
         HStack(spacing: 20){
             NavigationLink{
-               favoritesView()
+                favoritesView()
             } label: {
                 Image(systemName: "heart")
                     .resizable()
@@ -119,28 +119,28 @@ struct TrackerView: View {
         .frame(maxWidth: .infinity, maxHeight: 70)
         .background(Color.CustomYellowLight)
     }
-
+    
     func saveMeals() {
         let encodedData = try? JSONEncoder().encode(meals)
         UserDefaults.standard.set(encodedData, forKey: mealsKey)
     }
-
+    
     func loadMeals() {
         if let encodedData = UserDefaults.standard.data(forKey: mealsKey),
            let savedMeals = try? JSONDecoder().decode([Meal].self, from: encodedData) {
             meals = savedMeals
         }
     }
-
+    
     func updateCurrentDate() {
         currentDate = Date()
     }
-
+    
     func totalCaloriesForToday() -> Int {
         let total = meals.filter { isMealForToday($0) }.reduce(0) { $0 + $1.calories }
         return total
     }
-
+    
     func isMealForToday(_ meal: Meal) -> Bool {
         let calendar = Calendar.current
         return calendar.isDate(meal.date, inSameDayAs: currentDate)

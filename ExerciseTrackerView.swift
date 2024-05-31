@@ -24,7 +24,7 @@ struct ExerciseTrackerView: View {
         Spacer()
         HStack(spacing: 20){
             NavigationLink{
-               favoritesView()
+                favoritesView()
             } label: {
                 Image(systemName: "heart")
                     .resizable()

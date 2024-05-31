@@ -48,5 +48,5 @@ struct generatingView: View {
         .background(Color.CustomYellowDark)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
     }
-               
+    
 }

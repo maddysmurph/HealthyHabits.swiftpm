@@ -31,16 +31,16 @@ struct KetoView: View {
                     }
                     VStack {
                         Button(action: {
-                        Link("Keto Sheet Pan Chicken and Loaded Cauliflower", destination: sheetURL)
-                    }, label: {
-                        Image("12")
-                            .resizable()
-                            .frame(width: 150, height: 150)
-                            .clipShape(RoundedRectangle(cornerRadius: 10.0))
-                    })
+                            Link("Keto Sheet Pan Chicken and Loaded Cauliflower", destination: sheetURL)
+                        }, label: {
+                            Image("12")
+                                .resizable()
+                                .frame(width: 150, height: 150)
+                                .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                        })
                         .animation(.easeIn, value: 180)
                         Link("Keto Sheet Pan Chicken & Loaded Cauliflower", destination: URL(string: "https://www.foodnetwork.com/recipes/food-network-kitchen/keto-sheet-pan-chicken-and-loaded-cauliflower-8050489")!)
-                            }
+                    }
                 }
                 HStack {
                     VStack {
@@ -84,8 +84,8 @@ struct KetoView: View {
                 }
             }
         }
-
-
-
-            }
-        }
+        
+        
+        
+    }
+}

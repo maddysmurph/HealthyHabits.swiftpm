@@ -26,10 +26,10 @@ struct preferredSleepTime: View {
             .font(.system(size: 20))
             .foregroundColor(.black)
         DatePicker("", selection: $currentDate, displayedComponents: .hourAndMinute)
-                    .labelsHidden()
+            .labelsHidden()
         NavigationLink("Continue"){
             WeightView()
-
+            
         }
         .frame(width: 200, height: 40)
         .font(.system(size: 20))
